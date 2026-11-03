@@ -1,0 +1,40 @@
+[project]
+name = "media-meta-framework"
+version = "0.1.0"
+description = "웹·법령·공개 데이터의 메타데이터를 하나의 스키마로 추출·통합하는 프레임워크"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mmf-schema",
+    "mmf-web-crawler",
+    "mmf-law-structurer",
+    "mmf-public-data",
+    "mmf-framework",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["schema", "modules/*", "framework"]
+
+[tool.uv.sources]
+mmf-schema = { workspace = true }
+mmf-web-crawler = { workspace = true }
+mmf-law-structurer = { workspace = true }
+mmf-public-data = { workspace = true }
+mmf-framework = { workspace = true }
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["schema/tests", "modules", "framework/tests"]
+addopts = "--import-mode=importlib"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

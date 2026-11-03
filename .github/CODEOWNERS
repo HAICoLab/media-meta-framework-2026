@@ -1,0 +1,10 @@
+# 각 경로를 수정하는 PR은 지정된 담당자의 리뷰가 필요합니다.
+# 주석(#)을 지우고 <github-id>를 실제 GitHub 아이디로 바꾸세요.
+# 브랜치 보호 규칙에서 "Require review from Code Owners"를 켜야 적용됩니다.
+
+# *                          <github-id-교수>
+# /schema/                   <github-id-교수>
+# /modules/web_crawler/      <github-id-1번담당>
+# /modules/law_structurer/   <github-id-2번담당>
+# /modules/public_data/      <github-id-3번담당>
+# /framework/                <github-id-4번담당>
