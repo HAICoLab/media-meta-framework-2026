@@ -44,7 +44,10 @@
         └── cases/                  # 출력: 사례 JSON
 ```
 
-새 입력 형식은 [규칙] 모듈을 추가해 지원합니다. 규정 DB의 규칙 모듈은 `preprocess`, `split_sections`, `heading`, `identify_nodes` 함수를 제공해야 하며, 적용할 모듈은 `make_json_regulations.select_rules()`에서 선택합니다.
+새 입력 형식은 [규칙] 모듈을 수정하거나 추가해 지원합니다.
+
+- **규정 DB**: `document_rules/`에 규칙 모듈을 추가합니다. 규칙 모듈은 `preprocess`, `split_sections`, `heading`, `identify_nodes` 함수를 제공해야 하며, 적용할 모듈은 `make_json_regulations.select_rules()`에서 선택합니다.
+- **심의사례 DB**: 헤더 표기가 새로 나오면 `case_rules.py`의 `ALIASES`에 해당 표기와 공통 필드를 추가합니다. 등록되지 않은 헤더 열은 `review_issues`에 `미지원 헤더 열`로 표시됩니다.
 
 ## 설치
 
