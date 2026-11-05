@@ -1,0 +1,761 @@
+[
+  {
+    "case_id": "2024-광고-03-0025",
+    "case_date": "2024-02-06",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "투니버스",
+      "program_name": "고스트워 시즌2(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-09",
+          "start_time": "16:50",
+          "end_time": "16:50"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 모바일 게임 ‘고스트워 시즌2’ 광고에서, - “고스트워 사상 최초 100 연뽑 지급”이라는 언급과 함께, ‘추.석.특.별 이벤트’, ‘9/25(월)~10/4(수)’라는 자막을 방송한 것은 경품류 및 할인 특매에 관한 방송광고는 소비자에 게 구체적인 정보를 제공해야 함에도, 이미 종료된 경품 이벤트 내용을 방송한 것으로, 관련 심 의규정에 위반되는 것으로 판단되어, - ｢방송법｣ 제100조제1항에 따라 관련 규정을 준수하도록 ‘의견제시’하니, 향후 유사한 사안이 발생하지 않도록 유의하시기 바람.",
+      "provisions": "「방송광고심의에 관한 규정」 제24조(경품류 및 할인특매)제1항",
+      "result": [
+        "의견제시"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        1
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0028",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "MBC-TV",
+      "program_name": "Cass(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-10-04",
+          "start_time": "22:59",
+          "end_time": "22:59"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 맥주 광고에서, “오늘 이 시간은 우리를 어디로 데려갈까?”, “우린 친해진다. 잔을 맞댄 이 시간부터”라고 언급하는 내용 등을 방송하였으나, 음주행위 미화로 보기 어려워 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        1
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0029",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "SBS-TV",
+      "program_name": "Cass(30초)",
+      "broadcast_time": [
+        {
+          "date": "2023-10-08",
+          "start_time": "00:56",
+          "end_time": "00:56"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 맥주 광고에서, “오늘 이 시간은 우리를 어디로 데려갈까?”, “우린 친해진다. 잔을 맞댄 이 시간부터”라고 언급하는 내용 등을 방송하였으나, 음주행위 미화로 보기 어려워 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        1
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0030",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "Mnet",
+      "program_name": "새로(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-10-13",
+          "start_time": "23:12",
+          "end_time": "23:12"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 소주(새로) 광고에서, “한잔에 기뻤고”, “한잔에 슬펐다”, “새로 한잔에 마음이 아름다운 곡 선이어라” 등을 언급하는 장면을 방송하였으나, 음주행위 미화로 보기 어려워 문제없음으로 의 결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        1
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0031",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "SBS-TV",
+      "program_name": "코에픽(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-10",
+          "start_time": "09:52",
+          "end_time": "09:52"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 계절성 알레르기 비염 증상(재채기, 콧물, 가려움)의 개선 등 치료에 사용하는 기기 ‘코에픽’ 광고에서, 어린이가 광고노래에 맞춰 콧물을 닦거나 재채기를 하는 듯한 율동 장면 등을 방송하 였으나, 어린이 모델의 율동은 제품의 특징을 직접적으로 전달한다기 보다는 비염 증상을 나타 내는 단순한 동작일 뿐이라는 점 등을 고려해 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        1
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0032",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "채널A",
+      "program_name": "코에픽(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-10",
+          "start_time": "14:46",
+          "end_time": "14:47"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 계절성 알레르기 비염 증상(재채기, 콧물, 가려움)의 개선 등 치료에 사용하는 기기 ‘코에픽’ 광고에서, 어린이가 광고노래에 맞춰 콧물을 닦거나 재채기를 하는 듯한 율동 장면 등을 방송하 였으나, 어린이 모델의 율동은 제품의 특징을 직접적으로 전달한다기 보다는 비염 증상을 나타 내는 단순한 동작일 뿐이라는 점 등을 고려해 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        1
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0033",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "OCN",
+      "program_name": "코에픽(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-11",
+          "start_time": "07:27",
+          "end_time": "07:27"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 계절성 알레르기 비염 증상(재채기, 콧물, 가려움)의 개선 등 치료에 사용하는 기기 ‘코에픽’ 광고에서, 어린이가 광고노래에 맞춰 콧물을 닦거나 재채기를 하는 듯한 율동 장면 등을 방송하 였으나, 어린이 모델의 율동은 제품의 특징을 직접적으로 전달한다기 보다는 비염 증상을 나타 내는 단순한 동작일 뿐이라는 점 등을 고려해 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        1
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0034",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "SBS funE",
+      "program_name": "코에픽(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-19",
+          "start_time": "10:35",
+          "end_time": "10:35"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 계절성 알레르기 비염 증상(재채기, 콧물, 가려움)의 개선 등 치료에 사용하는 기기 ‘코에픽’ 광고에서, 어린이가 광고노래에 맞춰 콧물을 닦거나 재채기를 하는 듯한 율동 장면 등을 방송하 였으나, 어린이 모델의 율동은 제품의 특징을 직접적으로 전달한다기 보다는 비염 증상을 나타 내는 단순한 동작일 뿐이라는 점 등을 고려해 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        1
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0035",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "씨엔티브이 (CNTV)",
+      "program_name": "키엔용(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-04",
+          "start_time": "18:30",
+          "end_time": "18:31"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 일반식품 ‘키엔용’ 광고에서, 어린이 출연자를 비춰주며 어린이의 목소리로 “오호 녹용”이라 고 언급하는 장면을 방송하였으나, 제품의 효능·효과나 특장점 등의 특징을 설명한 것이 아니 며, 단순히 제품의 성분을 언급한 것에 불과하므로, 광고적 표현으로 허용될만 한 수준의 내용 이라는 점 등을 고려해 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        1
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0036",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "KBS Joy",
+      "program_name": "키엔용(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-08",
+          "start_time": "13:17",
+          "end_time": "13:17"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 일반식품 ‘키엔용’ 광고에서, 어린이 출연자를 비춰주며 어린이의 목소리로 “오호 녹용”이라 고 언급하는 장면을 방송하였으나, 제품의 효능·효과나 특장점 등의 특징을 설명한 것이 아니 며, 단순히 제품의 성분을 언급한 것에 불과하므로, 광고적 표현으로 허용될만 한 수준의 내용 이라는 점 등을 고려해 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        1
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0037",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "ENA PLAY",
+      "program_name": "키엔용(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-10",
+          "start_time": "10:59",
+          "end_time": "10:59"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 일반식품 ‘키엔용’ 광고에서, 어린이 출연자를 비춰주며 어린이의 목소리로 “오호 녹용”이라 고 언급하는 장면을 방송하였으나, 제품의 효능·효과나 특장점 등의 특징을 설명한 것이 아니 며, 단순히 제품의 성분을 언급한 것에 불과하므로, 광고적 표현으로 허용될만 한 수준의 내용 이라는 점 등을 고려해 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        1
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0038",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "채널S",
+      "program_name": "키엔용(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-10",
+          "start_time": "15:05",
+          "end_time": "15:06"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 일반식품 ‘키엔용’ 광고에서, 어린이 출연자를 비춰주며 어린이의 목소리로 “오호 녹용”이라 고 언급하는 장면을 방송하였으나, 제품의 효능·효과나 특장점 등의 특징을 설명한 것이 아니 며, 단순히 제품의 성분을 언급한 것에 불과하므로, 광고적 표현으로 허용될만 한 수준의 내용 이라는 점 등을 고려해 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        1
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0039",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "KBS kids",
+      "program_name": "키엔용(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-13",
+          "start_time": "10:24",
+          "end_time": "10:25"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 일반식품 ‘키엔용’ 광고에서, 어린이 출연자를 비춰주며 어린이의 목소리로 “오호 녹용”이라 고 언급하는 장면을 방송하였으나, 제품의 효능·효과나 특장점 등의 특징을 설명한 것이 아니 며, 단순히 제품의 성분을 언급한 것에 불과하므로, 광고적 표현으로 허용될만 한 수준의 내용 이라는 점 등을 고려해 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        2
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0040",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "the DRAMA",
+      "program_name": "키엔용(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-17",
+          "start_time": "09:50",
+          "end_time": "09:51"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 일반식품 ‘키엔용’ 광고에서, 어린이 출연자를 비춰주며 어린이의 목소리로 “오호 녹용”이라 고 언급하는 장면을 방송하였으나, 제품의 효능·효과나 특장점 등의 특징을 설명한 것이 아니 며, 단순히 제품의 성분을 언급한 것에 불과하므로, 광고적 표현으로 허용될만 한 수준의 내용 이라는 점 등을 고려해 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        2
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0041",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "MBC Dramanet",
+      "program_name": "키엔용(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-17",
+          "start_time": "23:43",
+          "end_time": "23:43"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 일반식품 ‘키엔용’ 광고에서, 어린이 출연자를 비춰주며 어린이의 목소리로 “오호 녹용”이라 고 언급하는 장면을 방송하였으나, 제품의 효능·효과나 특장점 등의 특징을 설명한 것이 아니 며, 단순히 제품의 성분을 언급한 것에 불과하므로, 광고적 표현으로 허용될만 한 수준의 내용 이라는 점 등을 고려해 문제없음으로 의결함.",
+      "provisions": null,
+      "result": [
+        "문제없음"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        2
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0042",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "the DRAMA",
+      "program_name": "앰네스티 동백꽃(1분)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-16",
+          "start_time": "16:58",
+          "end_time": "16:59"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 기부금품 모집 ‘앰네스티 동백꽃’ 광고에서, - ‘메이람 /강간 피해 생존자’, ‘친구와 함께 저 건물로 끌려 가자 마자 끔찍한 일들이 시작됐습 니다. 군인들은 우리를 강간하기 위해 쉴 새 없이 들어 왔어요. 한 명이 끝내기도 전에 다음 사 람이 방 안에 들어와 있었어요’라는 자막 등 성폭력 피해 실상을 구체적으로 노출한 것은 유사한 경험이 있는 시청자의 부정적 수용 가능성을 고려할 때, - ｢방송법｣ 제100조제1항에 따라 관련 규정을 준수하도록 ‘의견제시’하니, 향후 유사한 사안이 발생하지 않도록 유의하시기 바람.",
+      "provisions": "「방송광고심의에 관한 규정」 제4조(품위등)제10호",
+      "result": [
+        "의견제시"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        2
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-04-0043",
+    "case_date": "2024-02-20",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "OLIFE",
+      "program_name": "앰네스티 동백꽃(1분)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-16",
+          "start_time": "18:27",
+          "end_time": "18:28"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 기부금품 모집 ‘앰네스티 동백꽃’ 광고에서, - ‘메이람 /강간 피해 생존자’, ‘친구와 함께 저 건물로 끌려 가자 마자 끔찍한 일들이 시작됐습 니다. 군인들은 우리를 강간하기 위해 쉴 새 없이 들어 왔어요. 한 명이 끝내기도 전에 다음 사 람이 방 안에 들어와 있었어요’라는 자막 등 성폭력 피해 실상을 구체적으로 노출한 것은 유사한 경험이 있는 시청자의 부정적 수용 가능성을 고려할 때, - ｢방송법｣ 제100조제1항에 따라 관련 규정을 준수하도록 ‘의견제시’하니, 향후 유사한 사안이 발생하지 않도록 유의하시기 바람.",
+      "provisions": "「방송광고심의에 관한 규정」 제4조(품위등)제10호",
+      "result": [
+        "의견제시"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        2
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-03-0026",
+    "case_date": "2024-02-27",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "가요티비",
+      "program_name": "백년식당 서서갈비 염소고기만두탕(10분)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-23",
+          "start_time": "21:57",
+          "end_time": "22:07"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 식품 ‘백년식당 서서갈비 염소고기만두탕’ 광고에서, - 실제 제품에 함유된 염소고기의 함량은 3.14%임에도 불구하고, 해당 사실은 시청자가 알아 보기 어려운 작은 자막으로 고지한 채, “만두 속에 염소고기가 듬뿍듬뿍 들어가서 진짜 일품이 다!”, “염소고기가 듬뿍 들어가 있으니까 맛 보장! 확실하다니까요?”, “다른 고기도 아니고 염소 고기 만두탕이 1인분 3,993원!” 등의 출연자 발언과 자막을 방송하고, “값비싼 보양식 염소고 기, 이젠 염소고기 만두탕으로 즐기자!”, “귀한 염소고기를 통째로 가득가득 꽉꽉!” 등의 나레이 션 및 자막을 방송한 것은 염소고기 함량에 대해 시청자를 오인케 할 우려가 있는 것으로, 관련 심의규정에 위반되는 것으로 판단되어, - ｢방송법｣ 제100조제1항에 따라 관련 규정을 준수하도록 ‘권고’하니, 향후 유사한 사안이 발 생하지 않도록 유의하시기 바람.",
+      "provisions": "「방송광고심의에 관한 규정」 제18조(진실성)제2항제2호",
+      "result": [
+        "권고"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        2
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-05-0046",
+    "case_date": "2024-02-27",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "Mnet",
+      "program_name": "호올스(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-13",
+          "start_time": "15:33",
+          "end_time": "15:33"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 식품 ‘호올스’ 광고에서, - 수입식품의 경우 해당 식품의 제조ㆍ생산 국가 및 수입‧판매 업소명을 중요 정보로서 표기해 야 함에도 이중 제조ㆍ생산 국가를 누락한 채 방송한 것은 관련 심의규정에 위반되는 것으로 판 단되어, - ｢방송법｣ 제100조제1항에 따라 관련 규정을 준수하도록 ‘권고’하니, 향후 유사한 사안이 발 생하지 않도록 유의하시기 바람.",
+      "provisions": "「방송광고심의에 관한 규정」 제25조(식품등)제1항",
+      "result": [
+        "권고"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        2
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-05-0047",
+    "case_date": "2024-02-27",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "the DRAMA",
+      "program_name": "호올스(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-16",
+          "start_time": "22:22",
+          "end_time": "22:22"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 식품 ‘호올스’ 광고에서, - 수입식품의 경우 해당 식품의 제조ㆍ생산 국가 및 수입‧판매 업소명을 중요 정보로서 표기해 야 함에도 이중 제조ㆍ생산 국가를 누락한 채 방송한 것은 관련 심의규정에 위반되는 것으로 판 단되어, - ｢방송법｣ 제100조제1항에 따라 관련 규정을 준수하도록 ‘권고’하니, 향후 유사한 사안이 발 생하지 않도록 유의하시기 바람.",
+      "provisions": "「방송광고심의에 관한 규정」 제25조(식품등)제1항",
+      "result": [
+        "권고"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        3
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-05-0048",
+    "case_date": "2024-02-27",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "KBS Joy",
+      "program_name": "호올스(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-17",
+          "start_time": "14:39",
+          "end_time": "14:40"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 식품 ‘호올스’ 광고에서, - 수입식품의 경우 해당 식품의 제조ㆍ생산 국가 및 수입‧판매 업소명을 중요 정보로서 표기해 야 함에도 이중 제조ㆍ생산 국가를 누락한 채 방송한 것은 관련 심의규정에 위반되는 것으로 판 단되어, - ｢방송법｣ 제100조제1항에 따라 관련 규정을 준수하도록 ‘권고’하니, 향후 유사한 사안이 발 생하지 않도록 유의하시기 바람.",
+      "provisions": "「방송광고심의에 관한 규정」 제25조(식품등)제1항",
+      "result": [
+        "권고"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        3
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-05-0049",
+    "case_date": "2024-02-27",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "MBC드라마넷",
+      "program_name": "호올스(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-17",
+          "start_time": "21:44",
+          "end_time": "21:44"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 식품 ‘호올스’ 광고에서, - 수입식품의 경우 해당 식품의 제조ㆍ생산 국가 및 수입‧판매 업소명을 중요 정보로서 표기해 야 함에도 이중 제조ㆍ생산 국가를 누락한 채 방송한 것은 관련 심의규정에 위반되는 것으로 판 단되어, - ｢방송법｣ 제100조제1항에 따라 관련 규정을 준수하도록 ‘권고’하니, 향후 유사한 사안이 발 생하지 않도록 유의하시기 바람.",
+      "provisions": "「방송광고심의에 관한 규정」 제25조(식품등)제1항",
+      "result": [
+        "권고"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        3
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  },
+  {
+    "case_id": "2024-광고-05-0050",
+    "case_date": "2024-02-27",
+    "case_metadata": {
+      "review_category": null,
+      "broadcaster": null,
+      "channel": "e채널",
+      "program_name": "호올스(15초)",
+      "broadcast_time": [
+        {
+          "date": "2023-11-23",
+          "start_time": "21:14",
+          "end_time": "21:15"
+        }
+      ]
+    },
+    "case_decision": {
+      "content": "○ 식품 ‘호올스’ 광고에서, - 수입식품의 경우 해당 식품의 제조ㆍ생산 국가 및 수입‧판매 업소명을 중요 정보로서 표기해 야 함에도 이중 제조ㆍ생산 국가를 누락한 채 방송한 것은 관련 심의규정에 위반되는 것으로 판 단되어, - ｢방송법｣ 제100조제1항에 따라 관련 규정을 준수하도록 ‘권고’하니, 향후 유사한 사안이 발 생하지 않도록 유의하시기 바람.",
+      "provisions": "「방송광고심의에 관한 규정」 제25조(식품등)제1항",
+      "result": [
+        "권고"
+      ]
+    },
+    "source": {
+      "file": "2024_02_broadcast_ad_ntt19730.pdf",
+      "report_period": "2024-02",
+      "category": "broadcast_ad",
+      "page": [
+        3
+      ],
+      "sha256": "1406716dce417f1d60604ee0fa81b10887069cde2aff435b4d3f381de1281509"
+    }
+  }
+]
