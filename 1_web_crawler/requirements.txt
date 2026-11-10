@@ -1,0 +1,29 @@
+# 직접 의존성 (버전 고정). 간접 의존성은 pip 이 자동 설치하며,
+# 라이선스 목록은 THIRD_PARTY_NOTICES.md 에 정리되어 있다.
+#
+# 설치 (Python 3.10 이상):
+#   pip install -r requirements.txt
+#   playwright install chromium
+#
+# no_wiki_ver/ 모듈(com2usN · MBC충북 · CJ ENM 크롤러)만 쓸 때 필요한 최소 패키지:
+#   playwright, httpx, beautifulsoup4  (+ CJ ENM 수집은 외부 모듈 broadcast_web_crawler, 아래 sqlalchemy 포함)
+
+# ── 웹 서버 ──
+fastapi==0.142.2
+uvicorn==0.54.0
+pydantic==2.13.4
+
+# ── DB ──
+aiosqlite==0.22.1
+
+# ── 크롤링 / 파싱 ──
+playwright==1.63.0
+httpx==0.28.1
+beautifulsoup4==4.15.0
+lxml==6.1.1
+mwparserfromhell==0.7.2
+
+# ── 외부 모듈 broadcast_web_crawler 가 요구하는 의존성 ──
+# 2.1.x 는 Python 3.11+ 전용이라 3.10 에서도 설치되도록 범위로 둔다
+# (3.10 에서 새로 설치하면 2.0.57 이 깔린다. THIRD_PARTY_NOTICES.md 에는 개발 환경에 설치된 2.1.6 이 적혀 있으며 둘 다 MIT)
+sqlalchemy>=2.0,<3

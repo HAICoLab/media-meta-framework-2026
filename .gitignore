@@ -220,3 +220,12 @@ __marimo__/
 .streamlit/secrets.toml
 
 .DS_Store
+
+# media-meta-framework 런타임 데이터 (DB·위키 덤프·수집 결과·로그)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.bz2
+*.bz2.info.json
+1_web_crawler/data/
