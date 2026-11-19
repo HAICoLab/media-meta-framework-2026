@@ -1,11 +1,12 @@
 # 2. 법령 데이터 구조화
 
-방송·미디어 규정 원문과 심의의결 사례를 구조화된 JSON으로 변환합니다. 서로 독립된 두 처리기로 구성됩니다.
+방송·미디어 규정 원문과 심의의결 사례를 구조화된 JSON으로 변환합니다. 서로 독립된 두 처리기와, 사례 JSON으로 합성 벤치마크를 만드는 생성기로 구성됩니다.
 
 - **규정 DB (`regulation_db`)**: 규정 TXT → 조·항·호·목 계층 JSON, 항 단위 검색용 JSON
 - **심의사례 DB (`case_db`)**: 심의의결 현황 PDF → 사례 단위 JSON
+- **합성 벤치마크 (`benchmark`)**: 사례 JSON → "방송 전 사전 제작안" + 그 의결의 관련 조항 (LLM 호출)
 
-두 처리기 모두 명령줄에서 실행하며, 입력을 변환·검증한 뒤 JSON으로 저장합니다.
+두 처리기는 명령줄에서 실행하며, 입력을 변환·검증한 뒤 JSON으로 저장합니다. 합성 벤치마크 생성기만 LLM 서버가 필요합니다.
 
 ## 디렉터리 구성
 
@@ -34,14 +35,18 @@
 │       ├── regulations/            # 출력: 규정 JSON
 │       └── paragraphs/             # 출력: 항 검색 JSON
 │
-└── case_db/                        # 심의의결 PDF → 사례 JSON
-    ├── make_json_cases.py          # [흐름]  PDF 읽기 → 사례 구성 → 검증 → 사례 JSON 저장
-    ├── pdf_processor.py            # [표·셀] PDF의 표·셀·좌표 추출
-    ├── case_rules.py               # [규칙]  헤더 별칭, 복합 셀 분리, 날짜·이름·결과 정규화
-    ├── tests/
-    ├── data/                       # 입력: 심의의결 PDF, 출처 목록 sources.json
-    └── output/
-        └── cases/                  # 출력: 사례 JSON
+├── case_db/                        # 심의의결 PDF → 사례 JSON
+│   ├── make_json_cases.py          # [흐름]  PDF 읽기 → 사례 구성 → 검증 → 사례 JSON 저장
+│   ├── pdf_processor.py            # [표·셀] PDF의 표·셀·좌표 추출
+│   ├── case_rules.py               # [규칙]  헤더 별칭, 복합 셀 분리, 날짜·이름·결과 정규화
+│   ├── tests/
+│   ├── data/                       # 입력: 심의의결 PDF, 출처 목록 sources.json
+│   └── output/
+│       └── cases/                  # 출력: 사례 JSON
+│
+└── benchmark/                      # 사례 JSON → 합성 벤치마크 JSON
+    ├── make_json_benchmark.py      # [흐름]  사례 읽기 → 방송 기록 구성 → 모델 호출 → 결과 분류 → 저장
+    └── prompt.md                   # 시스템 지시 + 예시 2건(입력·출력)
 ```
 
 새 입력 형식은 [규칙] 모듈을 수정하거나 추가해 지원합니다.
@@ -91,9 +96,34 @@ python make_json_cases.py data output/cases --case-id 2026-광고-04-0045
 - 입력에는 PDF 하나 또는 폴더를 지정합니다.
 - `data/sources.json`이 있으면 게시물 URL, 보고 기간 등 PDF에 없는 출처 정보를 함께 씁니다. 없으면 해당 값은 `null`이 됩니다.
 
+### 합성 벤치마크
+
+심의사례의 의결 내용을 바탕으로, 그 방송을 내보내기 전에 제작진이 썼을 법한 "사전 제작안"을 LLM으로 만듭니다. 제작안과 그 의결의 관련 조항을 묶으면 "제작안을 보고 확인할 조항을 찾는" 과제의 시험 자료가 됩니다.
+
+```bash
+cd 2_law_structurer/benchmark
+
+# 사례 JSON → 벤치마크 JSON
+export OPENAI_API_KEY=<키>      # 키가 필요 없는 자체 서버면 생략
+python make_json_benchmark.py ../case_db/output/cases output/benchmark.json \
+    --base-url http://localhost:8000/v1 --model <모델 이름>
+
+# 일부 사례만
+python make_json_benchmark.py ../case_db/output/cases output/benchmark.json \
+    --base-url http://localhost:8000/v1 --model <모델 이름> --case-id 2024-광고-03-0027 --case-id 2023-방송-17-0171
+```
+
+- 입력에는 사례 JSON 파일 하나 또는 폴더를 지정합니다. 외부 패키지는 쓰지 않습니다.
+- 모델은 정해져 있지 않습니다. OpenAI 호환 방식(`/v1/chat/completions`)으로 받는 서버면 되며, 주소는 `--base-url`, 모델 이름은 `--model`로 줍니다. OpenAI API, vLLM·Ollama 같은 자체 서버, 호환 주소를 제공하는 다른 회사 API에 그대로 쓸 수 있습니다.
+- 모델에는 방송사·채널·프로그램명·방송일시와 의결 내용만 줍니다. 의결번호, 관련 조항, 심의결과는 주지 않습니다.
+- 프롬프트는 `prompt.md`에 있습니다. 시스템 지시와 예시 2건(입력·출력)이 들어 있고, 다른 파일을 쓰려면 `--prompt`로 지정합니다.
+- 사례가 하나 끝날 때마다 저장합니다. 출력 파일에 이미 `ok`·`excluded`로 있는 사례는 다시 만들지 않으며, `--overwrite`를 주면 다시 만듭니다. (아래 "기존 결과가 있을 때"의 규칙은 이 명령에 적용되지 않습니다.)
+- 그 밖의 옵션: `--limit`, `--max-tokens`(기본 16000), `--temperature`(기본 1.0), `--workers`(기본 4), `--timeout`, `--api-key-env`, `--no-thinking`(vLLM으로 띄운 Qwen처럼 추론을 끌 수 있는 서버에서만 씁니다).
+- 사례마다 처리 결과가 JSON 한 줄로 출력됩니다. `failed`가 하나라도 있으면 종료 코드는 1입니다.
+
 ### 기존 결과가 있을 때
 
-세 명령 모두 출력 폴더에 같은 이름의 파일이 있으면 다음과 같이 동작합니다.
+규정 DB·심의사례 DB의 세 명령 모두 출력 폴더에 같은 이름의 파일이 있으면 다음과 같이 동작합니다.
 
 | 경우 | 동작 |
 |---|---|
@@ -246,6 +276,33 @@ PDF 하나당 JSON 파일 하나이며, 사례 리스트를 담습니다.
 - `report_period`는 단일 월(`2026-06`) 또는 합본 기간(`2026-07~2026-08`)입니다.
 - 게시물·다운로드 URL 등 자세한 출처는 `source.sha256`으로 `data/sources.json`에서 찾습니다.
 
+### 벤치마크 JSON (합성 벤치마크의 출력)
+
+```json
+{
+  "meta": {"model": "<모델 이름>", "prompt": "prompt.md", "prompt_sha256": "fe60…", "options": {"max_tokens": 16000, "temperature": 1.0, "thinking": true}, "created": "2026-11-20T03:26:32+09:00"},
+  "cases": [
+    {
+      "case_id": "2024-광고-03-0027",
+      "status": "ok",
+      "scenario": "**〈KT×LG 서빙로봇 렌탈〉 사전 제작 기획안**\n\n**1. 방송 개요** …",
+      "provisions": "「상품소개 및 판매방송 심의에 관한 규정」제40 조(가격표시)제3항제3호",
+      "result": ["권고"],
+      "source": {"file": "2024_02_product_sales_ntt19736.pdf", "category": "product_sales"}
+    }
+  ]
+}
+```
+
+| 필드 | 내용 |
+|---|---|
+| `meta` | 생성에 쓴 모델, 프롬프트 파일과 그 SHA-256, 생성 옵션, 저장 시각 |
+| `case_id` | 사례 JSON의 의결번호 |
+| `status` | `ok`(제작안 생성), `excluded`(모델이 제외로 답함), `failed`(호출 실패 또는 출력 상한에서 끊김) |
+| `scenario` | 마크다운 제작안. `ok`가 아니면 `null` |
+| `provisions`, `result` | 사례 JSON의 관련 조항 원문과 심의결과를 그대로 옮긴 것 |
+| `excluded_reason` | `excluded`일 때만 있음. 모델이 답한 "제외: (이유)" 문장 |
+
 ## 포함된 데이터
 
 | 구분 | 입력 | 출력 |
@@ -269,4 +326,5 @@ PDF 하나당 JSON 파일 하나이며, 사례 리스트를 담습니다.
 - **PDF별 보정**: 표 경계 때문에 방송일시가 잘못 나뉘는 PDF 1건에는 그 파일의 해시에만 적용되는 보정을 둡니다(`case_rules.py`의 `VERIFIED_BOUNDARY_REPAIRS`).
 - **이름 근거 범위**: 이름 줄바꿈의 근거는 함께 처리한 PDF 전체의 셀에서 찾습니다. 따라서 PDF 하나만 처리하면 폴더 전체를 처리했을 때와 이름 띄어쓰기가 다를 수 있습니다. 저장된 결과는 `data/` 폴더 전체를 처리한 것입니다.
 - **검증 범위**: 자동 검증은 원문 대비 누락·변경만 확인하며, 전체 필드에 대한 전문가 검수를 대신하지 않습니다. 표본 밖 시기의 PDF 양식에는 규칙 추가가 필요할 수 있습니다.
+- **합성 벤치마크의 한계**: 제작안은 LLM이 쓴 글이며 사람이 검수하지 않았습니다. 모델에 따라 어색한 표현이나 기록에 없는 내용이 섞일 수 있고, 제외 판단(`excluded`)도 틀릴 수 있습니다. `provisions`는 원 의결이 인용한 조항 원문이며 규정 JSON의 조문과 연결하지 않았습니다. 생성 결과는 저장소에 포함하지 않았습니다.
 - **범위 밖**: 사례의 관련 조항과 심의 당시 규정 판본의 연결, DB·검색엔진 적재는 이 폴더에서 다루지 않습니다.
