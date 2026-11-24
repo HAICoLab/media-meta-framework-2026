@@ -11,13 +11,16 @@ import unicodedata
 
 
 TITLE = re.compile('[「｢『](.*?)[」｣』]')
-# 「」 없이 쓴 규정명. 문자열 맨 앞이나 쉼표 바로 뒤에서, '제N조'가 아닌 글자로 시작해 규정 종류 이름으로 끝난다.
-BARE_TITLE = re.compile(r'(?:^|(?<=,))(?!제\d)([^「」｢｣『』,()]*?(?:규정|규칙|고시|기준|법률|시행령|시행규칙|법))(?=\(|제\d)')
+# 「」 없이 쓴 규정명. 문자열 맨 앞이나 쉼표·'/'·'및' 바로 뒤에서, '제N조'가 아닌 글자로 시작해 규정 종류 이름으로 끝난다.
+BARE_TITLE = re.compile(r'(?:^|(?<=,)|(?<=/)|(?<=및))(?!제\d)([^「」｢｣『』,/()]*?(?:규정|규칙|고시|기준|법률|시행령|시행규칙|법))'
+                        r'(?=\(|제\d)')
+# 위에서 찾지 못했지만 조 번호 바로 앞에 붙은 규정 이름. 앞 규정의 조항으로 붙이지 않고 오류로 남긴다.
+UNREAD_TITLE = re.compile(r'(?<!\d)((?![조항호])[가-힣A-Za-z]+?(?:규정|규칙|고시|기준|법률|시행령|시행규칙|법))(?=제\d)')
 QUOTED_IN_PARENS = re.compile(r'\([^()]*[「｢『][^()]*\)')                  # "(「식품표시광고법」 위반)" 같은 설명 괄호
 HEADING = re.compile(r'제(\d+)조(?:의(\d+))?\(([^)]*)\)')                 # "제58조의2(방송사고)"의 조 제목
-# 가지 번호는 "제4호의2"와 "제4의2호" 두 표기를 모두 읽는다. 목은 "가목", "가·나목"을 읽는다.
+# 가지 번호는 "제4호의2"와 "제4의2호" 두 표기를 모두 읽는다. 목은 "가목", "가·나목", "가.나목"을 읽는다.
 TOKEN = re.compile(r'제(?P<number>\d+)(?:의(?P<pre>\d+))?(?P<unit>조|항|호)(?:의(?P<sub>\d+))?'
-                   r'|(?P<letters>[가-힣](?:[·ㆍ][가-힣])*)목')
+                   r'|(?P<letters>[가-힣](?:[·ㆍ.][가-힣])*)목')
 RANGE = re.compile('부터|내지|[~∼～]')
 ORDER = {'조': 0, '항': 1, '호': 2, '목': 3}
 SUBITEM_ORDER = '가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허'
@@ -66,12 +69,16 @@ def parse_references(text):
         for number, sub, heading in HEADING.findall(fragment):
             headings[(title, number + (f'_{sub}' if sub else ''))] = heading
         path, found, after_range = {}, False, False
+        clean = re.sub(r'\([^)]*\)', '', fragment)          # 조 제목·판본 표기 괄호는 뗀다
+        if unread := UNREAD_TITLE.search(clean):
+            errors.append(f'규정명을 확인할 수 없음: {unread[1]}')
+            clean = clean[:unread.start(1)]                # 그 뒤 조항은 어느 규정인지 알 수 없어 읽지 않는다
 
         def emit():
             if '조' in path and (title, dict(path)) not in refs:
                 refs.append((title, dict(path)))
 
-        for part in re.sub(r'\([^)]*\)', '', fragment).split(','):   # 조 제목·판본 표기 괄호는 뗀다
+        for part in clean.split(','):
             if RANGE.search(part):
                 errors.append(f'범위 인용: {title} {part}')
                 emit()
@@ -83,7 +90,7 @@ def parse_references(text):
                     errors.append(f'조 없이 쓴 {unit}: {title} {part}' if after_range or found
                                   else f'조 번호를 읽지 못함: {title} {part}')
                     continue
-                letters = token['letters'].replace('ㆍ', '·').split('·') if token['letters'] else [None]
+                letters = re.split('[·ㆍ.]', token['letters']) if token['letters'] else [None]
                 if unit == '목' and any(letter not in SUBITEM_ORDER for letter in letters):
                     errors.append(f'목 표기를 읽지 못함: {title} {token[0]}')
                     continue
@@ -124,9 +131,14 @@ def cited(path):
     return ' '.join(out)
 
 
+def heading_key(value):
+    """조 제목 비교용: 띄어쓰기와 문장부호(·, 쉼표 등)를 뗀다. "어린이 청소년"과 "어린이·청소년"은 같다."""
+    return re.sub(r'[^\w]|_', '', compact(value))
+
+
 def heading_of(label):
     match = re.search(r'\((.*)\)$', label)
-    return compact(match[1]) if match else ''
+    return heading_key(match[1]) if match else ''
 
 
 def is_deleted(node):
@@ -153,9 +165,7 @@ class Regulations:
             raise SystemExit(f'조항 ID가 붙은 규정 JSON이 아닙니다(항 검색 JSON을 준 것은 아닌지 확인): {path}')
         self.nodes, self.prefix = {}, {}
         for record in self.records:
-            # 규정 JSON마다 문서명 필드 이름이 다르다(ETRI: document_name, 논문: document).
-            document = record.get('document_name') or record.get('document')
-            self.prefix[title_key(document)] = record['id'].split('_ART')[0]
+            self.prefix[title_key(record['document_name'])] = record['id'].split('_ART')[0]
             self._index(record)
 
     def _index(self, node):
@@ -166,7 +176,7 @@ class Regulations:
     def by_heading(self, prefix, heading):
         """같은 규정에서 조 제목이 정확히 같은 조. 하나일 때만 돌려준다."""
         found = [r for r in self.records
-                 if r['id'].split('_ART')[0] == prefix and heading_of(r['label']) == compact(heading)]
+                 if r['id'].split('_ART')[0] == prefix and heading_of(r['label']) == heading_key(heading)]
         return found[0] if len(found) == 1 else None
 
     def resolve(self, text):
@@ -191,7 +201,7 @@ class Regulations:
                 article = self.by_heading(prefix, heading)
                 if article is not None:
                     notes.append(f"조 번호 보정: {cited({'조': path['조']})}({heading}) → {article['label']}")
-            elif article is not None and heading and heading_of(article['label']) != compact(heading):
+            elif article is not None and heading and heading_of(article['label']) != heading_key(heading):
                 notes.append(f"조 제목 다름: 인용 {cited({'조': path['조']})}({heading}) / 규정 {article['label']}")
             if article is None:
                 errors.append(f"없는 조: {title} {cited({'조': path['조']})}")

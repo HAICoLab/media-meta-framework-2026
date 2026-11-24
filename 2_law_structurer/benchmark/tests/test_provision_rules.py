@@ -29,9 +29,16 @@ class ProvisionRules(unittest.TestCase):
         self.assertEqual(gold, ['BR_REVIEW_ART27', 'AD_REVIEW_ART10'])
 
     def test_unknown_law_is_reported_not_attached_to_previous_regulation(self):
-        gold, errors, _ = self.resolve('「방송심의에 관한 규정」제33조제1항, 방송법 제5조제1항')
-        self.assertEqual(gold, ['BR_REVIEW_ART33_P1'])
-        self.assertEqual(errors, ['대상 규정이 아님: 방송법'])
+        for text in ('「방송심의에 관한 규정」제33조제1항, 방송법 제5조제1항', '「방송심의에 관한 규정」제33조제1항 및 방송법 제5조'):
+            with self.subTest(text=text):
+                gold, errors, _ = self.resolve(text)
+                self.assertEqual(gold, ['BR_REVIEW_ART33_P1'])
+                self.assertEqual(errors, ['대상 규정이 아님: 방송법'])
+        self.assertEqual(self.resolve('「방송심의에 관한 규정」제14조 / 방송광고심의에 관한 규정 제10조')[0],
+                         ['BR_REVIEW_ART14', 'AD_REVIEW_ART10'])
+        gold, errors, _ = self.resolve('「방송심의에 관한 규정」제14조 외 국가법제5조')
+        self.assertEqual(gold, ['BR_REVIEW_ART14'])
+        self.assertTrue(errors[0].startswith('규정명을 확인할 수 없음'))
 
     def test_branch_number_in_both_spellings(self):
         for text in ('「방송광고심의에 관한 규정」제33조제1항제4의2호', '「방송광고심의에 관한 규정」제33조제1항제4호의2'):
@@ -40,8 +47,9 @@ class ProvisionRules(unittest.TestCase):
         self.assertEqual(self.resolve('「방송심의에 관한 규정」제38조의2제1항')[0], ['BR_REVIEW_ART38_2_P1'])
 
     def test_subitems_including_joined_letters(self):
-        gold, errors, _ = self.resolve('「방송광고심의에 관한 규정」제43조의2제1항제1호가·나목')
-        self.assertEqual((gold, errors), (['AD_REVIEW_ART43_2_P1_I1_A', 'AD_REVIEW_ART43_2_P1_I1_B'], []))
+        for text in ('「방송광고심의에 관한 규정」제43조의2제1항제1호가·나목', '「방송광고심의에 관한 규정」제43조의2제1항제1호가.나목'):
+            with self.subTest(text=text):
+                self.assertEqual(self.resolve(text), (['AD_REVIEW_ART43_2_P1_I1_A', 'AD_REVIEW_ART43_2_P1_I1_B'], [], []))
         self.assertEqual(rules.subitem_letter('하'), 'N')
         self.assertEqual(rules.subitem_letter('거'), 'O')
 
@@ -61,6 +69,7 @@ class ProvisionRules(unittest.TestCase):
         gold, errors, notes = self.resolve('「방송광고심의에 관한 규정」제25조(식품등)제1항')
         self.assertEqual(gold, ['AD_REVIEW_ART25_P1'])
         self.assertTrue(notes[0].startswith('조 제목 다름'))
+        self.assertEqual(self.resolve('「방송심의에 관한 규정」제44조(어린이 청소년 시청자보호)')[2], [])   # 문장부호 차이는 같은 제목
 
     def test_missing_deleted_and_empty_provisions_are_errors(self):
         self.assertEqual(self.resolve('「방송광고심의에 관한 규정」제18조(진실성)제6항')[0], [])

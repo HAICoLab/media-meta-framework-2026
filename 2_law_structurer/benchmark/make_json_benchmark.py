@@ -11,6 +11,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 import hashlib
+import http.client
 import json
 import os
 from pathlib import Path
@@ -37,9 +38,16 @@ def read_cases(path):
     files = sorted(path.glob('*.json')) if path.is_dir() else [path]
     if not files:
         raise ValueError(f'사례 JSON이 없습니다: {path}')
-    cases = []
+    cases, seen = [], {}
     for file in files:
-        cases.extend(json.loads(file.read_text(encoding='utf-8')))
+        for case in json.loads(file.read_text(encoding='utf-8')):
+            if case['case_id'] in seen:     # 원문 PDF가 같은 의결번호를 다른 사례에 쓴 경우. 덮어쓰지 않고 앞의 것만 쓴다
+                print(json.dumps({'status': 'review_required', 'reason': '의결번호 중복: 뒤의 사례는 쓰지 않음',
+                                  'case_id': case['case_id'], 'files': [seen[case['case_id']], file.name]},
+                                 ensure_ascii=False))
+                continue
+            seen[case['case_id']] = file.name
+            cases.append(case)
     return cases
 
 
@@ -101,9 +109,9 @@ def generate(case, messages, args, api_key, regulations):
         body = call_model(args.base_url, api_key, payload, args.timeout)
         choice = body['choices'][0]
         text, reason, usage = (choice['message'].get('content') or '').strip(), choice.get('finish_reason'), body.get('usage', {})
-    except (urllib.error.URLError, TimeoutError, KeyError, IndexError, ValueError) as exc:
-        reason = f'error: {exc}'
-    if text.startswith(EXCLUDED):
+    except (urllib.error.URLError, http.client.HTTPException, OSError, KeyError, IndexError, ValueError) as exc:
+        reason = f'error: {exc}'                                # 연결이 끊겨도 실행 전체를 멈추지 않고 failed로 남긴다
+    if text.startswith(EXCLUDED) and reason == 'stop':           # 잘린 응답은 제외 판단으로 보지 않는다
         status = 'excluded'
     else:
         status = 'ok' if text and reason == 'stop' else 'failed'
@@ -134,10 +142,11 @@ def main():
     parser.add_argument('--timeout', type=int, default=900, help='호출 하나의 제한 시간(초)')
     parser.add_argument('--no-thinking', action='store_true', help='추론을 끌 수 있는 서버(vLLM의 Qwen 등)에서 추론을 끈다')
     parser.add_argument('--workers', type=int, default=4, help='동시에 보내는 호출 수')
-    parser.add_argument('--overwrite', action='store_true', help='이미 생성된 사례도 다시 생성한다')
+    parser.add_argument('--overwrite', action='store_true', help='기존 출력 파일을 버리고 처음부터 다시 만든다')
     args = parser.parse_args()
 
-    cases = [c for c in read_cases(args.input) if c['case_decision'].get('content')]
+    all_cases = [c for c in read_cases(args.input) if c['case_decision'].get('content')]
+    cases = all_cases
     if args.case_id:
         known = {c['case_id'] for c in cases}
         missing = [i for i in args.case_id if i not in known]
@@ -151,25 +160,28 @@ def main():
     api_key = os.environ.get(args.api_key_env, 'none')
 
     output = Path(args.output)
+    options = {'max_tokens': args.max_tokens, 'temperature': args.temperature, 'thinking': not args.no_thinking}
     records = {}
-    if output.exists():                                         # 이미 생성된 사례는 유지한다
+    if output.exists() and not args.overwrite:                  # 같은 모델·프롬프트·옵션으로 만든 사례만 이어 쓴다
         saved = json.loads(output.read_text(encoding='utf-8'))
         before = saved.get('meta', {})
-        if not args.overwrite and (before.get('model'), before.get('prompt_sha256')) != (args.model, prompt_sha):
-            raise SystemExit(f'기존 결과는 다른 모델·프롬프트로 만들었습니다({before.get("model")}). '
-                             '새 출력 파일을 지정하거나 --overwrite로 모두 다시 만드십시오.')
-        by_id = {c['case_id']: c for c in cases}
+        if (before.get('model'), before.get('prompt_sha256'), before.get('options')) != (args.model, prompt_sha, options):
+            raise SystemExit(f'기존 결과는 다른 모델·프롬프트·옵션으로 만들었습니다({before.get("model")}). '
+                             '새 출력 파일을 지정하거나 --overwrite로 처음부터 다시 만드십시오.')
+        by_id = {c['case_id']: c for c in all_cases}
         for row in saved['cases']:
-            if row['case_id'] in by_id:                         # 정답은 지금 규정 JSON으로 다시 계산한다
-                keep = {k: row[k] for k in ('case_id', 'status', 'scenario')}
-                keep.update(answer_fields(by_id[row['case_id']], regulations))
-                if 'excluded_reason' in row:
-                    keep['excluded_reason'] = row['excluded_reason']
-                row = keep
-            records[row['case_id']] = row
-    todo = [c for c in cases if args.overwrite or records.get(c['case_id'], {}).get('status') not in ('ok', 'excluded')]
+            if row['case_id'] not in by_id:                     # 입력에 없는 사례는 정답을 확인할 수 없어 뺀다
+                print(json.dumps({'status': 'review_required', 'reason': '입력에 없는 사례를 결과에서 뺌',
+                                  'case_id': row['case_id']}, ensure_ascii=False))
+                continue
+            keep = {k: row[k] for k in ('case_id', 'status', 'scenario')}   # 정답은 지금 규정 JSON으로 다시 계산한다
+            keep.update(answer_fields(by_id[row['case_id']], regulations))
+            if 'excluded_reason' in row:
+                keep['excluded_reason'] = row['excluded_reason']
+            records[row['case_id']] = keep
+    todo = [c for c in cases if records.get(c['case_id'], {}).get('status') not in ('ok', 'excluded')]
     meta = {'model': args.model, 'prompt': Path(args.prompt).name, 'prompt_sha256': prompt_sha,
-            'options': {'max_tokens': args.max_tokens, 'temperature': args.temperature, 'thinking': not args.no_thinking}}
+            'options': options}
     saving = threading.Lock()
 
     def save():

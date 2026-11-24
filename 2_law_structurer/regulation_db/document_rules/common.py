@@ -13,7 +13,7 @@ PARAGRAPH = re.compile(r'^([' + MARKERS + r'])\s*(.*)$')
 ITEM = re.compile(r'^(\d+(?:의\d+)?)\.(?!\d)\s*(.*)$')
 # 목 번호는 가나다 순서의 글자만 쓴다.
 SUBITEM = re.compile(r'^([가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허])\.\s*(.*)$')
-DELETED = re.compile(r'^(제\d+조(?:의\d+)?)\s+(삭\s*제)(.*)$')
+DELETED = re.compile(r'^(제\d+조(?:의\d+)?)\s*(삭\s*제)(.*)$')
 SUPPLEMENT = re.compile(r'^(\d{8})\s+(\d+(?:-\d+)*)\s+부칙(?=\s|\(|$)')
 NOTICE = re.compile(r'^⊙.*(?:고시|공고|규칙|법률|대통령령|부령)\s*제\d+(?:-\d+)*호(?:\s*\([^\n]*\))?\s*$')
 DOWNLOAD = re.compile(r'^(?:https?://(?:www\.)?law\.go\.kr)?/(?:LSW/)?flDownload\.do\?\S+$', re.I)

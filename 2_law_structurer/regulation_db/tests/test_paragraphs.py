@@ -64,8 +64,10 @@ class Paragraphs(unittest.TestCase):
     def test_duplicate_search_paths_are_rejected(self):
         self.assertTrue(para.validate_paragraphs(self.paragraphs + self.paragraphs[:1]))
         self.assertTrue(para.validate_paragraphs([{'provision_path': [], 'content': None}]))
-        wrong = dict(self.paragraphs[0], id=self.paragraphs[0]['article_id'] + '_P9')
-        self.assertTrue(para.validate_paragraphs([wrong]))
+        record = next(r for r in self.paragraphs if r['id'] != r['article_id'])
+        wrong_id = record['article_id'] + '_P9'                 # 경로는 다른 항을 가리키는데 ID만 바뀐 기록
+        wrong = dict(record, id=wrong_id, rule_ids=[wrong_id, *record['rule_ids'][1:]])
+        self.assertTrue(any('ID와 경로' in e for e in para.validate_paragraphs([wrong])))
 
     def test_two_cli_steps_and_source_overwrite_protection(self):
         with tempfile.TemporaryDirectory() as folder:
