@@ -2,8 +2,10 @@
 
 실행: python make_json_benchmark.py ../case_db/output/cases output/benchmark.json \
           --base-url http://localhost:8000/v1 --model <모델 이름>
-사례 읽기 → 방송 기록 구성(의결번호·관련 조항·심의결과 제외) → 모델 호출 → 결과 분류 → 저장.
+사례 읽기 → 방송 기록 구성(의결번호·관련 조항·심의결과 제외) → 모델 호출 → 결과 분류 → 정답 조항 ID → 저장.
 모델은 OpenAI 호환 서버(/chat/completions)를 쓴다. API 키는 환경변수로 준다.
+정답(gold)은 의결의 관련 조항(gold_raw)을 규정 JSON(--regulations)의 조항 ID로 바꾼 것이다.
+읽지 못한 부분은 추측하지 않고 gold_errors에 남긴다.
 """
 import argparse
 from concurrent.futures import ThreadPoolExecutor
@@ -18,6 +20,11 @@ import threading
 import time
 import urllib.error
 import urllib.request
+
+if __package__:
+    from .provision_rules import Regulations
+else:
+    from provision_rules import Regulations
 
 ROOT = Path(__file__).resolve().parent
 MARKER = re.compile(r'<!--\s*(system|example input|example output)\s*-->')
@@ -70,7 +77,20 @@ def call_model(base_url, api_key, payload, timeout):
         return json.loads(response.read().decode('utf-8'))
 
 
-def generate(case, messages, args, api_key):
+def answer_fields(case, regulations):
+    """정답 칸: gold(조항 ID), gold_raw(관련 조항 원문), 필요할 때 gold_errors·gold_notes, 심의결과, 출처."""
+    gold, errors, notes = regulations.resolve(case['case_decision']['provisions'])
+    fields = {'gold': gold, 'gold_raw': case['case_decision']['provisions']}
+    if errors:
+        fields['gold_errors'] = errors
+    if notes:
+        fields['gold_notes'] = notes
+    fields.update({'result': case['case_decision']['result'],
+                   'source': {'file': case['source']['file'], 'category': case['source'].get('category')}})
+    return fields
+
+
+def generate(case, messages, args, api_key, regulations):
     """사례 하나의 제작안을 만든다. 실패도 레코드로 남긴다."""
     payload = {'model': args.model, 'messages': messages + [{'role': 'user', 'content': case_text(case)}],
                'max_tokens': args.max_tokens, 'temperature': args.temperature}
@@ -87,14 +107,8 @@ def generate(case, messages, args, api_key):
         status = 'excluded'
     else:
         status = 'ok' if text and reason == 'stop' else 'failed'
-    record = {
-        'case_id': case['case_id'],
-        'status': status,
-        'scenario': text if status == 'ok' else None,
-        'provisions': case['case_decision']['provisions'],
-        'result': case['case_decision']['result'],
-        'source': {'file': case['source']['file'], 'category': case['source'].get('category')},
-    }
+    record = {'case_id': case['case_id'], 'status': status, 'scenario': text if status == 'ok' else None,
+              **answer_fields(case, regulations)}
     if status == 'excluded':
         record['excluded_reason'] = text
     log = {'case_id': case['case_id'], 'status': status, 'finish_reason': reason,
@@ -111,6 +125,8 @@ def main():
     parser.add_argument('--model', required=True)
     parser.add_argument('--api-key-env', default='OPENAI_API_KEY', help='API 키가 든 환경변수 이름')
     parser.add_argument('--prompt', default=str(ROOT / 'prompt.md'))
+    parser.add_argument('--regulations', default=str(ROOT.parent / 'regulation_db' / 'output' / 'regulations'),
+                        help='조항 ID가 붙은 규정 JSON 폴더 (정답 조항 ID 변환에 씀)')
     parser.add_argument('--case-id', action='append', default=[], help='이 의결번호만 생성 (여러 번 지정 가능)')
     parser.add_argument('--limit', type=int, help='앞에서 N건만')
     parser.add_argument('--max-tokens', type=int, default=16000)
@@ -130,13 +146,27 @@ def main():
         cases = [c for c in cases if c['case_id'] in args.case_id]
     cases = cases[:args.limit]
     messages = read_prompt(args.prompt)
+    regulations = Regulations(args.regulations)
     prompt_sha = hashlib.sha256(Path(args.prompt).read_bytes()).hexdigest()
     api_key = os.environ.get(args.api_key_env, 'none')
 
     output = Path(args.output)
     records = {}
     if output.exists():                                         # 이미 생성된 사례는 유지한다
-        records = {r['case_id']: r for r in json.loads(output.read_text(encoding='utf-8'))['cases']}
+        saved = json.loads(output.read_text(encoding='utf-8'))
+        before = saved.get('meta', {})
+        if not args.overwrite and (before.get('model'), before.get('prompt_sha256')) != (args.model, prompt_sha):
+            raise SystemExit(f'기존 결과는 다른 모델·프롬프트로 만들었습니다({before.get("model")}). '
+                             '새 출력 파일을 지정하거나 --overwrite로 모두 다시 만드십시오.')
+        by_id = {c['case_id']: c for c in cases}
+        for row in saved['cases']:
+            if row['case_id'] in by_id:                         # 정답은 지금 규정 JSON으로 다시 계산한다
+                keep = {k: row[k] for k in ('case_id', 'status', 'scenario')}
+                keep.update(answer_fields(by_id[row['case_id']], regulations))
+                if 'excluded_reason' in row:
+                    keep['excluded_reason'] = row['excluded_reason']
+                row = keep
+            records[row['case_id']] = row
     todo = [c for c in cases if args.overwrite or records.get(c['case_id'], {}).get('status') not in ('ok', 'excluded')]
     meta = {'model': args.model, 'prompt': Path(args.prompt).name, 'prompt_sha256': prompt_sha,
             'options': {'max_tokens': args.max_tokens, 'temperature': args.temperature, 'thinking': not args.no_thinking}}
@@ -151,7 +181,7 @@ def main():
         temporary.replace(output)
 
     def work(case):
-        record, log = generate(case, messages, args, api_key)
+        record, log = generate(case, messages, args, api_key, regulations)
         with saving:                                            # 사례가 끝날 때마다 저장한다
             records[record['case_id']] = record
             save()

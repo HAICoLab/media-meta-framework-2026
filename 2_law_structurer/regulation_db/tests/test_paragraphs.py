@@ -19,10 +19,10 @@ class Paragraphs(unittest.TestCase):
         self.records = reg.run(self.source)['records']
         self.paragraphs = para.build_paragraphs(self.records)
 
-    def test_only_body_and_exact_three_fields(self):
+    def test_only_body_and_exact_fields(self):
         self.assertEqual(len(self.paragraphs), 18)
         for record in self.paragraphs:
-            self.assertEqual(set(record), {'article_path', 'provision_path', 'content'})
+            self.assertEqual(list(record), para.FIELDS)
             self.assertNotIn('>', record['provision_path'])
             self.assertNotIn('부칙', record['provision_path'])
             self.assertNotIn('별표', record['provision_path'])
@@ -42,6 +42,17 @@ class Paragraphs(unittest.TestCase):
         self.assertTrue(results[0]['content'].startswith('①'))
         self.assertEqual(results[0]['content'], reg.collect_text(article['children'][0]))
         self.assertTrue(results[1]['provision_path'].endswith(' 제2항'))
+
+    def test_ids_cover_every_unit_once(self):
+        def ids(node):
+            return [node['id'], *(i for c in node['children'] for i in ids(c))]
+        expected = [i for r in self.records if r['region'] == 'body' for i in ids(r)]
+        placed = [i for r in self.paragraphs for i in r['rule_ids']]
+        split = {r['article_id'] for r in self.paragraphs if r['id'] != r['article_id']}
+        self.assertEqual(len(placed), len(set(placed)))
+        self.assertEqual(sorted(set(expected) - split), sorted(placed))
+        result = next(r for r in self.paragraphs if ' 제5조(' in r['article_path'])
+        self.assertEqual(result['id'], result['article_id'] + '_P1')
 
     def test_optional_parents_are_in_path_in_order(self):
         article = copy.deepcopy(self.records[0])

@@ -10,7 +10,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 import make_json_regulations as reg
-from document_rules import administrative_rule, law_rule, common
+from document_rules import administrative_rule, law_rule, common, documents
 
 
 class Regulations(unittest.TestCase):
@@ -136,6 +136,43 @@ class Regulations(unittest.TestCase):
         records = self.result()['records']
         records[1]['children'][0]['label'] = []
         self.assertTrue(reg.validate_records(records))
+
+    def test_ids_follow_labels_and_are_unique(self):
+        def walk(node):
+            yield node
+            for child in node['children']:
+                yield from walk(child)
+        for name, result in self.results.items():
+            with self.subTest(name=name):
+                nodes = [n for r in result['records'] for n in walk(r)]
+                ids = [n['id'] for n in nodes if n['type'] != 'block']
+                self.assertEqual(len(ids), len(set(ids)))
+                self.assertTrue(all('id' not in n for n in nodes if n['type'] == 'block'))
+        body = self.result('방송심의에_관한_규정')['records']
+        self.assertIn('BR_REVIEW_ART48_P1_I2', {n['id'] for r in body for n in walk(r) if 'id' in n})
+        ad = self.result('방송광고심의에_관한_규정')['records']
+        self.assertIn('AD_REVIEW_ART33_P1_I4_2', {n['id'] for r in ad for n in walk(r) if 'id' in n})
+        with self.assertRaises(ValueError):
+            documents.prefix('표에 없는 문서')
+
+    def test_corrections_are_applied_and_reported(self):
+        result = self.result('방송심의에_관한_규정')
+        article7 = next(r for r in result['records'] if r['label'].startswith('제7조('))
+        self.assertEqual(article7['children'][-1]['id'], 'BR_REVIEW_ART7_P16')
+        self.assertTrue(article7['children'][-1]['text'].startswith('⑯ 방송은 바른말'))
+        article38 = next(r for r in result['records'] if r['label'].startswith('제38조의2('))
+        self.assertEqual(article38['text'], '제38조의2(자살묘사)')
+        self.assertTrue(article38['children'][0]['text'].startswith('① 방송은 자살장면'))
+        notes = [r for r in result['validation']['review_issues'] if r['reason'].startswith('원문 보정')]
+        self.assertEqual(len(notes), 2)
+
+    def test_validator_rejects_missing_or_duplicate_ids(self):
+        records = self.result()['records']
+        del records[0]['id']
+        self.assertTrue(any('조항 ID 필요' in s for s in reg.validate_records(records)))
+        records = self.result()['records']
+        records[1]['id'] = records[0]['id']
+        self.assertTrue(any('조항 ID 중복' in s for s in reg.validate_records(records)))
 
     def test_invalid_result_cannot_overwrite_saved_file(self):
         result = self.result()

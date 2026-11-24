@@ -1,5 +1,6 @@
 [
   {
+    "id": "RATING_RULE_ART1",
     "document_id": "2200000075986",
     "document_name": "방송프로그램의 등급분류 및 표시 등에 관한 규칙",
     "source": {
@@ -17,6 +18,7 @@
     "children": []
   },
   {
+    "id": "RATING_RULE_ART2",
     "document_id": "2200000075986",
     "document_name": "방송프로그램의 등급분류 및 표시 등에 관한 규칙",
     "source": {
@@ -33,12 +35,14 @@
     "text": "제2조(기본원칙)",
     "children": [
       {
+        "id": "RATING_RULE_ART2_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "① 방송사업자는 어린이와 청소년을 보호하기 위하여 방송프로그램의 폭력성 및 선정성, 언어사용, 모방위험 등의 유해정도, 시청자의 연령 등을 감안하여 방송프로그램의 등급을 분류하고 이를 방송 중에 표시하여야 한다.",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART2_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 방송사업자는 제1항의 규정에 의한 등급분류 및 표시를 할 경우 이 규칙이 정하는 기준과 표시방법을 준수하여야 한다.",
@@ -47,6 +51,7 @@
     ]
   },
   {
+    "id": "RATING_RULE_ART3",
     "document_id": "2200000075986",
     "document_name": "방송프로그램의 등급분류 및 표시 등에 관한 규칙",
     "source": {
@@ -63,30 +68,35 @@
     "text": "제3조(등급분류) 방송사업자는 방송프로그램의 등급을 다음 각호와 같이 분류하여야 한다.",
     "children": [
       {
+        "id": "RATING_RULE_ART3_I1",
         "type": "item",
         "label": "제1호",
         "text": "1. \"모든연령시청가\"라 함은 모든 연령의 시청자가 시청하기에 부적절한 내용이 없는 등급을 말한다.",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART3_I2",
         "type": "item",
         "label": "제2호",
         "text": "2. \"7세이상시청가\"라 함은 7세미만의 어린이가 시청하기에 부적절한 내용이 포함되어 있어 보호자의 시청지도가 필요한 등급을 말한다.",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART3_I3",
         "type": "item",
         "label": "제3호",
         "text": "3. \"12세이상시청가\"라 함은 12세미만의 어린이가 시청하기에 부적절한 내용이 포함되어 있어 보호자의 시청지도가 필요한 등급을 말한다.",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART3_I4",
         "type": "item",
         "label": "제4호",
         "text": "4. \"15세이상시청가\"라 함은 15세미만의 청소년이 시청하기에 부적절한 내용이 포함되어 있어 보호자의 시청지도가 필요한 등급을 말한다.",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART3_I5",
         "type": "item",
         "label": "제5호",
         "text": "5. \"19세이상시청가\"라 함은 19세미만의 청소년이 시청하기에 부적절한 내용이 포함되어 있어 청소년이 시청할 수 없는 등급을 말한다.",
@@ -95,6 +105,7 @@
     ]
   },
   {
+    "id": "RATING_RULE_ART4",
     "document_id": "2200000075986",
     "document_name": "방송프로그램의 등급분류 및 표시 등에 관한 규칙",
     "source": {
@@ -111,12 +122,14 @@
     "text": "제4조(등급분류기준)",
     "children": [
       {
+        "id": "RATING_RULE_ART4_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "① 제3조의 등급분류기준은 별표 1과 같다.",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART4_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 방송사업자는 등급결정을 함에 있어 폭력성, 선정성, 언어사용, 모방위험 정도 등의 내용기준이 일치하지 않을 경우 가장 유해한 표현의 등급으로 분류하여야 한다.",
@@ -125,6 +138,7 @@
     ]
   },
   {
+    "id": "RATING_RULE_ART5",
     "document_id": "2200000075986",
     "document_name": "방송프로그램의 등급분류 및 표시 등에 관한 규칙",
     "source": {
@@ -141,29 +155,34 @@
     "text": "제5조(등급표시)",
     "children": [
       {
+        "id": "RATING_RULE_ART5_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "① 방송사업자는 제3조의 등급분류를 한 경우 다음 각호의 방법에 의하여 등급표시를 하여야 한다.",
         "children": [
           {
+            "id": "RATING_RULE_ART5_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 등급기호는 흰색 테두리 노랑색 바탕의 원형에 검정색 숫자로 해당 등급을 표시한다.",
             "children": []
           },
           {
+            "id": "RATING_RULE_ART5_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 등급기호의 위치 및 크기는 화면 좌상단 또는 우상단에 대각선의 1/20이상의 크기이어야 한다.",
             "children": []
           },
           {
+            "id": "RATING_RULE_ART5_P1_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 등급기호의 표시는 반투명으로 한다.",
             "children": []
           },
           {
+            "id": "RATING_RULE_ART5_P1_I4",
             "type": "item",
             "label": "제4호",
             "text": "4. \"모든연령시청가\" 등급에 해당하는 프로그램에는 별도의 기호를 표시하지 아니한다.",
@@ -172,18 +191,21 @@
         ]
       },
       {
+        "id": "RATING_RULE_ART5_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 방송사업자는 제1항에 의한 등급기호를 본방송프로그램의 시작과 동시에 30초이상, 방송중 매 10분마다 30초이상, 중간광고 직후 본방송프로그램의 시작과 동시에 30초이상 표시하여야 한다. 다만, \"19세이상시청가\" 등급에 해당하는 프로그램은 본방송프로그램의 시작부터 종료시까지 지속적으로 표시하여야 한다.",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART5_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③ 방송사업자는 본방송프로그램 시작전 등급을 표시하는 기호와 함께 별표 3에 따른 부연설명을 화면의 1/4 크기 이상으로 5초이상 자막고지하여야 한다.",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART5_P4",
         "type": "paragraph",
         "label": "제4항",
         "text": "④ 제3항에도 불구하고, \"15세이상시청가\"와 \"19세이상시청가\" 등급에 해당하는 경우에는 별표 3에 따른 분류사유가 포함된 부연설명이 전체 고지화면의 1/2 이상을 차지하도록 표시하여야 한다.",
@@ -192,6 +214,7 @@
     ]
   },
   {
+    "id": "RATING_RULE_ART6",
     "document_id": "2200000075986",
     "document_name": "방송프로그램의 등급분류 및 표시 등에 관한 규칙",
     "source": {
@@ -209,6 +232,7 @@
     "children": []
   },
   {
+    "id": "RATING_RULE_ART7",
     "document_id": "2200000075986",
     "document_name": "방송프로그램의 등급분류 및 표시 등에 관한 규칙",
     "source": {
@@ -232,6 +256,7 @@
     ]
   },
   {
+    "id": "RATING_RULE_ART8",
     "document_id": "2200000075986",
     "document_name": "방송프로그램의 등급분류 및 표시 등에 관한 규칙",
     "source": {
@@ -248,12 +273,14 @@
     "text": "제8조(예고방송)",
     "children": [
       {
+        "id": "RATING_RULE_ART8_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "① 방송사업자가 프로그램에 대한 예고방송을 할 때에는 해당 프로그램의 등급을 고지하거나 화면에 등급을 표시하여야 한다. 다만, 등급고지의 경우 제5조제3항의 부연설명은 생략할 수 있다",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART8_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 방송사업자가 \"19세이상시청가\" 등급의 프로그램을 청소년보호법에서 정한 청소년시청보호시간대에 안내 또는 예고방송할 때에는 어린이·청소년에게 유해한 내용 또는 장면을 포함하여서는 아니된다.",
@@ -262,6 +289,7 @@
     ]
   },
   {
+    "id": "RATING_RULE_ART9",
     "document_id": "2200000075986",
     "document_name": "방송프로그램의 등급분류 및 표시 등에 관한 규칙",
     "source": {
@@ -278,48 +306,56 @@
     "text": "제9조(적용범위) 이 규칙은 모든 방송프로그램에 대하여 적용한다. 다만, 다음 각호의 프로그램은 그러하지 아니하다.",
     "children": [
       {
+        "id": "RATING_RULE_ART9_I1",
         "type": "item",
         "label": "제1호",
         "text": "1. 보도 프로그램",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART9_I2",
         "type": "item",
         "label": "제2호",
         "text": "2. 범죄, 사고 등을 다룬 재연물이나 기록물을 제외한 다큐멘터리 프로그램",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART9_I3",
         "type": "item",
         "label": "제3호",
         "text": "3. 생활정보 프로그램",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART9_I4",
         "type": "item",
         "label": "제4호",
         "text": "4. 시사관련 대담·토론 프로그램",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART9_I5",
         "type": "item",
         "label": "제5호",
         "text": "5. 교육·문화예술 프로그램",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART9_I6",
         "type": "item",
         "label": "제6호",
         "text": "6. 지식이나 재치를 겨루는 순수 퀴즈 프로그램",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART9_I7",
         "type": "item",
         "label": "제7호",
         "text": "7. 이종격투기 등 폭력성이 지나친 종목을 제외한 스포츠 프로그램",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART9_I8",
         "type": "item",
         "label": "제8호",
         "text": "8. 기타 방송통신심의위원회(이하 \"위원회\"라 한다)가 인정하는 프로그램",
@@ -328,6 +364,7 @@
     ]
   },
   {
+    "id": "RATING_RULE_ART10",
     "document_id": "2200000075986",
     "document_name": "방송프로그램의 등급분류 및 표시 등에 관한 규칙",
     "source": {
@@ -344,12 +381,14 @@
     "text": "제10조(권고 등)",
     "children": [
       {
+        "id": "RATING_RULE_ART10_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "① 위원회는 제9조 각 호 외의 부분 단서의 규정에도 불구하고 제9조제1호부터 제7호까지에 해당하는 방송프로그램에 대해 등급부여가 필요하다고 판단될 경우 해당 방송사업자에게 등급을 부여하도록 권고를 하거나 의견을 제시할 수 있다.",
         "children": []
       },
       {
+        "id": "RATING_RULE_ART10_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 법 제33조제6항의 규정에 따른 등급분류 조정 요구와 제10조제1항의 규정에 의한 권고 등을 받은 당사자는 위원회에 의견을 제출할 수 있으며, 이 경우 위원회는 해당의견을 검토하여 그 결과를 당사자에게 통지하여야 한다.",
@@ -358,6 +397,7 @@
     ]
   },
   {
+    "id": "RATING_RULE_ART11",
     "document_id": "2200000075986",
     "document_name": "방송프로그램의 등급분류 및 표시 등에 관한 규칙",
     "source": {

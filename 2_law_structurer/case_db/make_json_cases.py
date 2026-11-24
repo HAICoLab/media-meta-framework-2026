@@ -471,7 +471,7 @@ def main():
     if not paths:
         parser.error('입력 PDF가 없습니다.')
     inputs = read_inputs(paths, metadata)
-    failed = False
+    failed, seen, duplicates = False, {}, []
     for path in paths:
         try:
             if path.name in inputs['errors']:
@@ -481,12 +481,19 @@ def main():
                 show = False
             if result['validation']['status'] != 'failed':
                 save_json(result, args.output / (path.stem + '.json'), overwrite=args.overwrite)
+                for case in result['cases']:     # 원문 PDF가 같은 의결번호를 다른 사례에 쓴 경우를 알린다
+                    if case['case_id'] in seen:
+                        duplicates.append({'case_id': case['case_id'], 'files': [seen[case['case_id']], path.name]})
+                    seen.setdefault(case['case_id'], path.name)
             else:
                 failed = True
             print(json.dumps({'file': path.name, **result['validation']}, ensure_ascii=False))
         except (OSError, ValueError) as exc:
             failed = True
             print(json.dumps({'file': path.name, 'status': 'failed', 'error': str(exc)}, ensure_ascii=False))
+    if duplicates:
+        print(json.dumps({'status': 'review_required', 'reason': '의결번호 중복: 원문 PDF에서 같은 번호가 다른 사례에 쓰임',
+                          'duplicates': duplicates}, ensure_ascii=False))
     if show and args.case_id:
         failed = True
         print(json.dumps({'status': 'failed', 'error': f'사례를 찾을 수 없습니다: --case-id {args.case_id}'},

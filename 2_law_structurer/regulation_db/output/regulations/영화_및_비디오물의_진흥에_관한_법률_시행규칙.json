@@ -1,5 +1,6 @@
 [
   {
+    "id": "FILM_ENFORCE_ART1",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -14,6 +15,7 @@
     "children": []
   },
   {
+    "id": "FILM_ENFORCE_ART2",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -27,12 +29,14 @@
     "text": "제2조(공동제작영화의 출자 비율) 「영화 및 비디오물의 진흥에 관한 법률」(이하 \"법\"이라 한다) 제2조제4호에 따른 공동제작영화는 한국영화제작업자와 외국영화제작업자가 공동으로 제작비용을 출자하되, 그 출자비율이 다음 각 호의 기준에 맞는 것을 말한다.",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART2_I1",
         "type": "item",
         "label": "제1호",
         "text": "1. 공동제작에 참여하는 영화제작업자의 국적이 2개국에 속하는 경우 : 국적별 출자비율이 각각 20퍼센트 이상일 것",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART2_I2",
         "type": "item",
         "label": "제2호",
         "text": "2. 공동제작에 참여하는 영화제작업자의 국적이 3개국 이상에 속하는 경우 : 국적별 출자비율이 각각 10퍼센트 이상일 것",
@@ -41,6 +45,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART3",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -54,12 +59,14 @@
     "text": "제3조(디지털 소형영화) 법 제2조제6호에서 \"문화체육관광부령이 정하는 영화\"라 함은 다음 각 호의 어느 하나에 해당하는 영화를 말한다.",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART3_I1",
         "type": "item",
         "label": "제1호",
         "text": "1. 2분의 1인치 이하의 전하결합소자 카메라로 제작한 영화",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART3_I2",
         "type": "item",
         "label": "제2호",
         "text": "2. 1920×1080픽셀 미만의 해상도로 제작한 영화",
@@ -68,6 +75,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART3_2",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -88,6 +96,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART3_3",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -108,6 +117,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART3_4",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -121,23 +131,27 @@
     "text": "제3조의4(평가단의 구성ㆍ운영)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART3_4_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①영 제9조의6제3항에 따른 평가단(이하 \"평가단\"이라 한다)은 9명 이내의 위원으로 구성한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART3_4_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②제1항에 따른 평가위원은 문화체육관광부 소속 공무원과 다음 각 호의 어느 하나에 해당하는 자 중에서 문화체육관광부장관이 임명 또는 위촉한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART3_4_P2_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 영화예술 및 영화산업 등에 관하여 전문성과 경험이 풍부한 자",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART3_4_P2_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 기금운영에 관한 전문가",
@@ -146,6 +160,7 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART3_4_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③평가단의 구성ㆍ운영에 관하여 그 밖에 필요한 사항은 문화체육관광부장관이 정한다.",
@@ -160,6 +175,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART4",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -173,35 +189,41 @@
     "text": "제4조(영화업자의 신고절차 등)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART4_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "① 법 제26조제1항 전단에 따라 신고를 하려는 자는 별지 제1호의2서식의 영화업신고서를 특별자치시장ㆍ특별자치도지사ㆍ시장ㆍ군수ㆍ구청장(구청장은 자치구의 구청장을 말하며, 이하 \"시장ㆍ군수ㆍ구청장\"이라 한다)에게 제출하여야 한다. 이 경우 시장ㆍ군수ㆍ구청장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 법인 등기사항증명서(법인인 경우에 한한다)와 사업자등록증명(주민등록번호가 제외된 사업자등록증명을 말한다. 이하 같다)을 확인하여야 하며, 신청인이 사업자등록증명의 확인에 동의하지 않는 경우에는 그 서류를 첨부하게 해야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART4_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 법 제26조제1항 후단에 따른 변경신고의 대상이 되는 사항은 다음 각 호와 같다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART4_P2_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 대표자의 성명",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART4_P2_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 상호(법인의 경우에는 법인명)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART4_P2_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 영업소의 소재지",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART4_P2_I4",
             "type": "item",
             "label": "제4호",
             "text": "4. 영화업의 종류",
@@ -210,17 +232,20 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART4_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③법 제26조제1항 후단에 따라 변경신고를 하려는 자는 그 변경사항이 있는 날부터 30일 이내에 별지 제2호서식의 영화업변경신고서에 다음 각 호의 서류를 첨부하여 시장ㆍ군수ㆍ구청장에게 제출하여야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART4_P3_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 신고증",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART4_P3_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 변경사항을 증명하는 서류",
@@ -229,29 +254,34 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART4_P4",
         "type": "paragraph",
         "label": "제4항",
         "text": "④시장ㆍ군수ㆍ구청장은 제1항에 따른 영화업 신고가 있는 때에는 그 신고내용에 따라 법 제2조제9호 각 목에 따른 영화제작업자ㆍ영화수입업자ㆍ영화배급업자 또는 영화상영업자로 각각 구분하여 별지 제3호서식의 영화업신고증을 교부하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART4_P5",
         "type": "paragraph",
         "label": "제5항",
         "text": "⑤시장ㆍ군수ㆍ구청장은 제4항에 따라 신고증을 교부받은 자가 그 신고증을 잃어버리거나 신고증이 헐어 못쓰게 된 사유 등으로 신고증의 재교부를 신청하는 때에는 이를 다시 교부하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART4_P6",
         "type": "paragraph",
         "label": "제6항",
         "text": "⑥제5항에 따라 영화업신고증의 재교부를 신청하려는 자는 별지 제4호서식의 영화업신고증재교부신청서에 신고증(헐어 못쓰게 된 경우만 해당한다)을 첨부하여 시장ㆍ군수ㆍ구청장에게 제출해야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART4_P6_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 삭제",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART4_P6_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 삭제",
@@ -262,6 +292,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART5",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -275,29 +306,34 @@
     "text": "제5조(공동제작영화의 한국영화 인정신청)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART5_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①법 제27조에 따라 공동제작영화를 한국영화로 인정받으려는 자는 별지 제5호서식의 공동제작영화의 한국영화인정신청서에 다음 각 호의 서류를 첨부하여 영화진흥위원회에 제출하여야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART5_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 공동제작계약서 사본(국문계약서를 포함한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART5_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 대본",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART5_P1_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 제작계획서(제작비 명세서를 포함한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART5_P1_I4",
             "type": "item",
             "label": "제4호",
             "text": "4. 그 밖에 영 제10조제3항 각 호의 사항을 평가할 수 있는 자료",
@@ -306,6 +342,7 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART5_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②제1항에 따라 공동제작영화의 완성 전에 한국영화의 인정을 받은 자는 영화의 제작이 완료된 후 영화상영등급 분류를 신청하기 15일 전까지 영화진흥위원회에 제1항제4호에 따른 자료를 제출하여야 한다.",
@@ -314,6 +351,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART5_2",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -327,18 +365,21 @@
     "text": "제5조의2(영화업의 폐업신고 및 직권말소)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART5_2_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "① 법 제28조의2제1항에 따라 폐업신고를 하려는 자는 별지 제5호의2서식의 영화업 폐업신고서에 신고증을 첨부하여 시장ㆍ군수ㆍ구청장에게 제출하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART5_2_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 시장ㆍ군수ㆍ구청장은 법 제28조의2제2항에 따라 신고사항을 직권으로 말소하려는 경우에는 해당 사업자에게 폐업 사실을 확인하여야 한다. 다만, 「부가가치세법」 제8조에 따라 관할세무서장에게 폐업신고를 하거나 관할세무서장이 사업자등록을 말소한 사실을 확인한 경우에는 그러하지 아니하다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART5_2_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③ 시장ㆍ군수ㆍ구청장은 법 제28조의2제2항에 따라 신고사항을 직권으로 말소하려는 경우에는 사전에 해당 사업자에게 통지하고, 직권 말소 예정 사실을 해당 특별자치시ㆍ특별자치도ㆍ시ㆍ군ㆍ구(자치구를 말한다)의 인터넷 홈페이지에 20일 이상 게시하여야 한다.",
@@ -353,6 +394,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART5_3",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -366,24 +408,28 @@
     "text": "제5조의3(영상위원회에 관한 조례) 법 제28조의4제3항에 따라 영상위원회의 조직ㆍ운영에 필요한 사항을 정하는 조례에는 다음 각 호의 사항이 포함되어야 한다.",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART5_3_I1",
         "type": "item",
         "label": "제1호",
         "text": "1. 영상위원회 위원의 수, 자격, 임기 및 정족수 등 영상위원회의 구성 및 운영에 관한 사항",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART5_3_I2",
         "type": "item",
         "label": "제2호",
         "text": "2. 영상위원회의 기능과 사업 범위",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART5_3_I3",
         "type": "item",
         "label": "제3호",
         "text": "3. 영상위원회 운영에 필요한 재원의 조달에 관한 사항",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART5_3_I4",
         "type": "item",
         "label": "제4호",
         "text": "4. 그 밖에 영상위원회의 조직ㆍ운영에 필요한 사항",
@@ -398,6 +444,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART5_4",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -411,18 +458,21 @@
     "text": "제5조의4(국제영화제에 관한 조례) 법 제28조의5제3항에 따라 국제영화제의 개최ㆍ운영 및 지원에 필요한 사항을 정하는 조례에는 다음 각 호의 사항이 포함되어야 한다.",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART5_4_I1",
         "type": "item",
         "label": "제1호",
         "text": "1. 국제영화제를 개최ㆍ운영하는 방식",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART5_4_I2",
         "type": "item",
         "label": "제2호",
         "text": "2. 국제영화제를 개최ㆍ운영하는 관련 법인 또는 단체의 명칭 및 사업 범위",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART5_4_I3",
         "type": "item",
         "label": "제3호",
         "text": "3. 제2호에 따른 사업 비용, 운영 경비 등 지방자치단체가 국제영화제를 개최ㆍ운영하는 관련 법인 또는 단체에 재정적으로 지원할 수 있는 사항",
@@ -437,6 +487,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART6",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -450,18 +501,21 @@
     "text": "제6조(영화필름등의 제출 등)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART6_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①영 제12조제1항에서 \"문화체육관광부령이 정하는 서류\"라 함은 별지 제6호서식의 영화필름등의 제출서를 말한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART6_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②한국영상자료원은 법 제35조제1항 및 제2항에 따라 영화필름등을 제출한 자에게 별지 제7호서식의 영화필름등의 제출증명서를 교부하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART6_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③영 제12조제4항에 따른 영화필름등의 보상청구서는 별지 제8호서식에 따른다.",
@@ -470,6 +524,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART7",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -484,6 +539,7 @@
     "children": []
   },
   {
+    "id": "FILM_ENFORCE_ART8",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -498,6 +554,7 @@
     "children": []
   },
   {
+    "id": "FILM_ENFORCE_ART9",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -511,35 +568,41 @@
     "text": "제9조(영화상영관등록신청서 등)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART9_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①법 제36조제1항에 따라 영화상영관의 등록이나 변경등록을 하려는 자는 별지 제9호서식의 영화상영관등록(변경등록)신청서에 다음 각 호의 서류를 첨부하여 시설의 소재지를 관할하는 시장ㆍ군수ㆍ구청장에게 제출하여야 한다. 다만, 변경등록을 하려는 경우에는 변경사항과 관련되는 서류만을 첨부한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART9_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 시설설치내역서",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART9_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 시설의 평면도 및 배치도",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART9_P1_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 영화상영관의 전경 및 주요부분의 사진",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART9_P1_I4",
             "type": "item",
             "label": "제4호",
             "text": "4. 부동산의 소유권 또는 사용권을 증명할 수 있는 서류",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART9_P1_I5",
             "type": "item",
             "label": "제5호",
             "text": "5. 영화상영관등록증(변경등록의 경우에 한한다)",
@@ -548,12 +611,14 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART9_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②영 제14조제2항 및 제3항에 따른 영화상영관등록증과 영화상영관등록부는 각각 별지 제10호서식과 별지 제11호서식에 따른다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART9_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③영 제14조제4항에 따라 영화상영관등록증을 재교부받으려는 자는 별지 제12호서식의 영화상영관등록증 재교부신청서를 시장ㆍ군수ㆍ구청장에게 제출하여야 한다. 이 경우 등록증이 헐어 못쓰게 되어 재교부받고자 하는 자는 그 등록증을 첨부하여야 한다.",
@@ -562,6 +627,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART10",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -576,6 +642,7 @@
     "children": []
   },
   {
+    "id": "FILM_ENFORCE_ART11",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -589,17 +656,20 @@
     "text": "제11조(전용상영관에 대한 지원)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART11_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①법 제38조에 따라 전용상영관의 지원을 받으려는 자는 별지 제14호서식의 전용상영관지원 신청서에 다음 각 호의 서류를 첨부하여 문화체육관광부장관에게 제출하여야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART11_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 전용상영관 경영계획서와 운영실적서",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART11_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 지원받기를 원하는 사항의 내역서",
@@ -608,6 +678,7 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART11_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 제1항에 따른 서류를 제출받은 문화체육관광부장관은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 법인 등기사항증명서(법인인 경우에 한한다)를 확인하여야 한다.",
@@ -616,6 +687,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART12",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -629,59 +701,69 @@
     "text": "제12조(영화상영관입장권 통합전산망자료)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART12_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①영 제18조제1항에서 \"문화체육관광부령이 정하는 사항\"이라 함은 다음 각 호의 사항을 말한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART12_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 영화상영관 명칭",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART12_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 상영 영화의 제목(외국영화의 경우에는 번역한 제목을 포함한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART12_P1_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 영화 상영기간",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART12_P1_I4",
             "type": "item",
             "label": "제4호",
             "text": "4. 영화의 상영등급",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART12_P1_I5",
             "type": "item",
             "label": "제5호",
             "text": "5. 영화 제작자의 국적",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART12_P1_I6",
             "type": "item",
             "label": "제6호",
             "text": "6. 영화 관람요금",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART12_P1_I7",
             "type": "item",
             "label": "제7호",
             "text": "7. 입장권 판매액(영화별 및 날짜별 구분)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART12_P1_I8",
             "type": "item",
             "label": "제8호",
             "text": "8. 영화상영관의 입장객 수",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART12_P1_I9",
             "type": "item",
             "label": "제9호",
             "text": "9. 그 밖에 영화진흥위원회가 영화상영관입장권 통합전산망 운영을 위하여 필요하다고 인정하는 사항",
@@ -690,6 +772,7 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART12_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 법 제39조제3항에서 \"해당 영화상영관의 입장객 수, 입장권 판매액 등 문화체육관광부령으로 정하는 사항에 관한 자료\"란 제1항 각 호의 사항에 관한 자료를 말한다.",
@@ -698,6 +781,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART13",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -711,53 +795,62 @@
     "text": "제13조(영화상영의 신고 등)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART13_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①법 제41조제1항에서 \"문화체육관광부령이 정하는 사항\"이라 함은 다음 각 호의 사항을 말한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART13_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 신고인의 상호 또는 법인명",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART13_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 영업소 소재지",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART13_P1_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 영화의 제목(번역한 제목이 있는 경우 이를 포함한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART13_P1_I4",
             "type": "item",
             "label": "제4호",
             "text": "4. 영화 상영기간",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART13_P1_I5",
             "type": "item",
             "label": "제5호",
             "text": "5. 영화 상영장소",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART13_P1_I6",
             "type": "item",
             "label": "제6호",
             "text": "6. 영화 관람요금",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART13_P1_I7",
             "type": "item",
             "label": "제7호",
             "text": "7. 영화 상영등급",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART13_P1_I8",
             "type": "item",
             "label": "제8호",
             "text": "8. 신고사항의 변경 사항 및 그 변경사유(변경신고에 한한다)",
@@ -766,24 +859,28 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART13_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②법 제41조제1항에 따라 영화상영의 신고 또는 변경신고를 하려는 자는 별지 제15호서식의 영화상영신고(변경신고)서를 영화의 상영 또는 변경 전일까지 시장ㆍ군수ㆍ구청장에게 제출하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART13_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③시장ㆍ군수ㆍ구청장은 제2항에 따라 영화상영의 신고 또는 변경신고를 받은 때에는 그 사실을 별지 제16호서식의 영화상영신고(변경신고)대장에 적은 후 신고인에게 별지 제17호서식의 영화상영신고증명서를 교부하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART13_P4",
         "type": "paragraph",
         "label": "제4항",
         "text": "④제3항에 따라 영화상영신고증명서를 교부받은 자가 신고증명서를 잃어버리거나 신고증명서가 헐어서 못쓰게 되어 재교부받으려는 때에는 별지 제18호서식의 영화상영신고증명서 재교부신청서를 시장ㆍ군수ㆍ구청장에게 제출해야 한다. 이 경우 신고증명서가 헐어 못쓰게 되어 재교부 받으려는 자는 그 신고증명서를 첨부해야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART13_P5",
         "type": "paragraph",
         "label": "제5항",
         "text": "⑤영화진흥위원회는 법 제41조제2항 후단에 따라 제1항 각 호의 사항을 해당 시장ㆍ군수ㆍ구청장에게 통보하거나 입장권통합전산망에 가입하여 확인하게 하여야 한다.",
@@ -792,6 +889,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART14",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -805,23 +903,27 @@
     "text": "제14조(영업자의 지위승계 신고)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART14_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①법 제46조제1항ㆍ제2항 및 법 제63조제1항ㆍ제2항에 따라 영업자의 지위를 승계한 자는 그 사유가 발생한 날부터 30일 이내에 별지 제19호서식의 영업양수(지위승계)신고서에 다음 각 호의 서류를 첨부하여 시장ㆍ군수ㆍ구청장에게 제출하여야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART14_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 지위를 승계한 자(법인의 경우에는 대표자를 말한다)의 성명ㆍ주민등록번호를 적은 서류",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART14_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 양도ㆍ양수계약서 등 지위승계를 증명하는 서류",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART14_P1_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 별지 제19호의2서식에 따른 행정처분의 내용 고지 및 가중처분 대상업소 확인서",
@@ -830,6 +932,7 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART14_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 제1항에 따른 서류를 제출받은 시장ㆍ군수ㆍ구청장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 지위를 승계한 자의 법인 등기사항증명서(법인인 경우에 한한다)를 확인하여야 한다.",
@@ -838,6 +941,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART14_2",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -858,6 +962,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART15",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -872,6 +977,7 @@
     "children": []
   },
   {
+    "id": "FILM_ENFORCE_ART15_2",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -885,29 +991,34 @@
     "text": "제15조의2(자체등급분류사업자 지정ㆍ재지정 서식 등)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART15_2_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "① 영 제23조의5제1항에 따른 자체등급분류사업자 지정신청서는 별지 제19호의4서식으로 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART15_2_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 영 제23조의5제1항에서 \"문화체육관광부령으로 정하는 서류\"란 다음 각 호의 서류를 말한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART15_2_P2_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 법 제50조의3제1항제1호에 따른 자체등급분류 업무운영 계획",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART15_2_P2_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 법 제50조의3제1항제2호에 따른 청소년 및 이용자 보호 계획",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART15_2_P2_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 법 제50조의3제2항제1호의 요건에 해당함을 증명할 수 있는 서류",
@@ -916,23 +1027,27 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART15_2_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③ 영 제23조의5제2항에 따른 자체등급분류사업자 재지정신청서는 별지 제19호의5서식으로 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART15_2_P4",
         "type": "paragraph",
         "label": "제4항",
         "text": "④ 영 제23조의5제2항에서 \"문화체육관광부령으로 정하는 서류\"란 다음 각 호의 서류를 말한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART15_2_P4_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 법 제50조의3제1항 각 호에 따른 계획의 이행 여부를 증명할 수 있는 서류 및 향후 계획서",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART15_2_P4_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 법 제50조의8제4항에 따른 개선조치의 이행 여부를 증명할 수 있는 서류",
@@ -941,23 +1056,27 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART15_2_P5",
         "type": "paragraph",
         "label": "제5항",
         "text": "⑤ 영 제23조의5제3항에 따른 자체등급분류사업자 지정서는 별지 제19호의6서식으로 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART15_2_P6",
         "type": "paragraph",
         "label": "제6항",
         "text": "⑥ 제1항 또는 제3항에 따라 자체등급분류사업자 지정신청서 또는 재지정신청서를 제출받은 영상물등급위원회는 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인해야 한다. 다만, 신청인이 제2호에 따른 서류의 확인에 동의하지 않는 경우에는 그 서류를 첨부하게 해야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART15_2_P6_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 법인 등기사항증명서",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART15_2_P6_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 사업자등록증명",
@@ -974,6 +1093,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART15_3",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -987,17 +1107,20 @@
     "text": "제15조의3(자체등급분류사업자의 준수사항)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART15_3_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "① 법 제50조의3제1항에 따라 지정받은 자체등급분류사업자(이하 \"자체등급분류사업자\"라 한다)는 법 제50조의4제3호에 따른 등급분류책임자를 다음 각 호의 어느 하나에 해당하는 사람 중에서 지정한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART15_3_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 해당 자체등급분류사업자의 임원",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART15_3_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 자체등급분류 업무를 담당하는 부서의 장",
@@ -1006,29 +1129,34 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART15_3_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 법 제50조의4제5호에서 \"문화체육관광부령으로 정하는 사항\"이란 다음 각 호의 사항을 말한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART15_3_P2_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 등급분류책임자가 법 제50조의4제3호에 따른 교육을 연 2회 이상 이수할 수 있도록 필요한 조치를 할 것",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART15_3_P2_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 법 제50조의7제4항에 따른 조치 결과를 영상물등급위원회에 통보할 것",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART15_3_P2_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 자체등급분류 업무와 청소년 및 이용자 보호 업무가 서로 연계될 수 있도록 할 것",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART15_3_P2_I4",
             "type": "item",
             "label": "제4호",
             "text": "4. 자체등급분류를 마친 온라인비디오물에 관한 세부사항을 영상물등급위원회에 통보할 것",
@@ -1037,6 +1165,7 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART15_3_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③ 제2항제4호에 따라 통보해야 하는 세부사항의 범위, 통보방법 및 통보시기 등 자체등급분류를 마친 온라인비디오물에 관한 세부사항 통보에 필요한 사항은 영상물등급위원회규정으로 정한다.",
@@ -1051,6 +1180,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART15_4",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1064,30 +1194,35 @@
     "text": "제15조의4(자체등급분류 업무의 적정성 평가)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART15_4_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "① 영상물등급위원회는 법 제50조의8제4항에 따라 자체등급분류 업무의 적정성 유지를 위한 평가(이하 \"적정성 평가\"라 한다)를 매년 1월 31일까지 실시해야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART15_4_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 영상물등급위원회는 적정성 평가 실시를 위하여 필요한 경우에는 자체등급분류사업자에게 관련된 자료의 제출을 요구할 수 있다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART15_4_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③ 영상물등급위원회는 제2항에 따라 제출받은 자료의 보완이 필요한 경우 자체등급분류사업자에게 보완을 요구할 수 있다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART15_4_P4",
         "type": "paragraph",
         "label": "제4항",
         "text": "④ 영상물등급위원회는 제1항에 따른 적정성 평가의 결과와 그에 따른 업무개선 권고를 매년 2월 말일까지 자체등급분류사업자에게 통보해야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART15_4_P5",
         "type": "paragraph",
         "label": "제5항",
         "text": "⑤ 제1항부터 제4항까지에서 규정한 사항 외에 적정성 평가의 절차 및 방법 등에 관한 사항은 영상물등급위원회규정으로 정한다.",
@@ -1102,6 +1237,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART15_5",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1115,18 +1251,21 @@
     "text": "제15조의5(친권자 등 법정대리인의 시청 지도수단) 자체등급분류사업자는 법 제53조제2항 단서에 따라 친권자 등 법정대리인(이하 이 조에서 \"친권자등\"이라 한다)이 시청 지도를 할 수 있도록 다음 각 호의 어느 하나에 해당하는 수단을 제공할 수 있다.",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART15_5_I1",
         "type": "item",
         "label": "제1호",
         "text": "1. 친권자등이 설정한 등급이나 내용정보에 맞는 비디오물만을 선별하여 시청할 수 있도록 하는 수단",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART15_5_I2",
         "type": "item",
         "label": "제2호",
         "text": "2. 가입자가 최근 3개월간 가입자의 계정을 통하여 이용한 온라인비디오물의 내역을 상시적으로 확인할 수 있도록 하는 수단",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART15_5_I3",
         "type": "item",
         "label": "제3호",
         "text": "3. 가입자가 요청하는 경우 최근 3개월간 가입자의 계정을 통하여 이용한 온라인비디오물의 내역을 확인할 수 있도록 하는 수단",
@@ -1141,6 +1280,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART16",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1154,23 +1294,27 @@
     "text": "제16조(비디오물제작업 등의 신고)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART16_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①법 제57조제1항 본문에 따라 비디오물제작업 또는 비디오물배급업의 신고를 하려는 자는 별지 제20호서식의 비디오물제작업신고서 또는 별지 제21호서식의 비디오물배급업신고서에 다음 각 호의 서류를 첨부하여 시장ㆍ군수ㆍ구청장에게 제출하여야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART16_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 영업소(공장이 있는 경우에는 이를 포함한다)의 임대차계약서 사본(임차한 경우에 한한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART16_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 소유하거나 임차한 제작시설 및 장비의 명세서(비디오물제작업자에 한한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART16_P1_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 사업계획서(비디오물배급업자에 한한다)",
@@ -1179,23 +1323,27 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART16_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②제1항에 따른 서류를 제출받은 시장ㆍ군수ㆍ구청장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인하여야 한다. 다만, 신고인이 제3호에 따른 서류의 확인에 동의하지 않는 경우에는 그 서류를 첨부하게 해야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART16_P2_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 법인 등기사항증명서(법인의 경우에 한한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART16_P2_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 영업소(공장이 있는 경우에는 이를 포함한다)의 건물등기사항증명서(임차한 경우로서 건축물대장의 소유자와 임대차계약서의 임대인이 다른 경우에 한한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART16_P2_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 사업자등록증명",
@@ -1206,6 +1354,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART17",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1220,6 +1369,7 @@
     "children": []
   },
   {
+    "id": "FILM_ENFORCE_ART18",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1233,17 +1383,20 @@
     "text": "제18조(비디오물시청제공업의 등록신청)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART18_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①법 제58조제1항 본문에 따라 비디오물시청제공업의 등록을 하려는 자는 별지 제22호서식의 비디오물시청제공업 등록신청서에 다음 각 호의 서류를 첨부하여 영업소 소재지를 관할하는 시장ㆍ군수ㆍ구청장에게 제출하여야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART18_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 영업소의 임대차계약서 사본(임차한 경우에 한한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART18_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 영업소의 면적을 포함한 영업시설ㆍ기구 및 설비 개요서",
@@ -1252,23 +1405,27 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART18_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②제1항에 따른 서류를 제출받은 시장ㆍ군수ㆍ구청장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인하여야 한다. 다만, 제3호의 경우 신청인이 확인에 동의하지 아니하는 경우에는 그 서류를 첨부하도록 하여야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART18_P2_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 법인 등기사항증명서(법인의 경우에 한한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART18_P2_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 영업소의 건물등기사항증명서(임차한 경우로서 건축물대장의 소유자와 임대차계약서의 임대인이 다른 경우에 한한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART18_P2_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 전기안전점검확인서",
@@ -1279,6 +1436,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART19",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1292,29 +1450,34 @@
     "text": "제19조(신고증ㆍ등록증의 교부 등)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART19_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①시장ㆍ군수ㆍ구청장은 법 제57조제1항에 따라 비디오물제작업 또는 비디오물배급업을 영위하려는 자가 신고한 때에는 각각 별지 제23호서식의 비디오물제작업신고증 또는 별지 제24호서식의 비디오물배급업신고증을 교부하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART19_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②시장ㆍ군수ㆍ구청장은 법 제58조제1항에 따른 비디오물시청제공업의 등록신청을 받은 때에는 별표 2에 따른 시설기준과 다음 각 호의 사항을 확인한 후 지체 없이 별지 제25호서식의 비디오물시청제공업등록부에 그 사실을 적고 별지 제26호서식의 비디오물시청제공업등록증을 교부하여야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART19_P2_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 「다중이용업소의 안전관리에 관한 특별법」 제9조제5항에 따라 안전시설등 완비증명서를 발급받았을 것",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART19_P2_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 「전기사업법」 제66조의2에 따른 전기안전점검을 받았을 것",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART19_P2_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 「학교보건법」 제6조제1항에 따라 학교환경위생정화구역에서 설치가 허용되는 시설일 것",
@@ -1323,6 +1486,7 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART19_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③제1항 및 제2항에 따라 신고증 또는 등록증을 교부받은 자가 신고증 또는 등록증을 잃어버리거나 헐어 못쓰게 된 사유 등으로 재교부 받으려는 때에는 별지 제27호서식의 비디오물영업신고(등록)증 재교부신청서에 신고증 또는 등록증을 첨부(등록증ㆍ신고증이 헐어 못쓰게 된 경우만 해당한다)하여 시장ㆍ군수ㆍ구청장에게 제출해야 한다.",
@@ -1331,6 +1495,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART20",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1344,35 +1509,41 @@
     "text": "제20조(변경신고ㆍ변경등록 등)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART20_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①법 제61조제1항에서 \"문화체육관광부령이 정하는 중요사항\"이라 함은 다음 각 호의 사항을 말한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART20_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 영업자(법인의 경우에는 그 대표자를 말한다)의 변경",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART20_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 영업소 소재지의 변경",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART20_P1_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 제작품목 또는 취급품목(비디오물제작업자 또는 비디오물배급업자의 경우에 한한다)의 변경",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART20_P1_I4",
             "type": "item",
             "label": "제4호",
             "text": "4. 상호의 변경",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART20_P1_I5",
             "type": "item",
             "label": "제5호",
             "text": "5. 영업소 면적의 변경(비디오물시청제공업에 한한다)",
@@ -1381,17 +1552,20 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART20_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②법 제61조제1항에 따라 변경신고 또는 변경등록을 하려는 자는 그 사유가 발생한 날부터 30일 이내에 다음 각 호의 서류를 시장ㆍ군수ㆍ구청장에게 제출하여야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART20_P2_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 비디오물제작업자 또는 비디오물배급업자가 신고사항을 변경하려는 경우 : 별지 제28호서식의 변경신고서",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART20_P2_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 비디오물시청제공업자가 등록사항을 변경하려는 경우 : 별지 제29호서식의 변경등록신청서",
@@ -1400,29 +1574,34 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART20_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③제2항의 서류에는 다음 각 호의 서류를 첨부하여야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART20_P3_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 신고증 또는 등록증",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART20_P3_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 영업소(공장이 있는 경우에는 공장을 포함한다)의 소재지를 변경하는 경우에는 영업소의 임대차계약서(임차한 경우에 한한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART20_P3_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 제작품목을 변경하는 경우에는 제작시설 및 장비의 명세서(제작시설 및 장비를 바꾸는 경우에 한한다)",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART20_P3_I4",
             "type": "item",
             "label": "제4호",
             "text": "4. 그 밖에 변경사항을 증명하는 서류",
@@ -1431,18 +1610,21 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART20_P4",
         "type": "paragraph",
         "label": "제4항",
         "text": "④ 제2항과 제3항에 따른 서류를 제출받은 시장ㆍ군수ㆍ구청장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 영업소의 건물등기사항증명서(임차한 경우로서 건축물대장의 소유자와 임대차계약서의 임대인이 다른 경우만 해당한다)와 전기안전점검확인서(영업소의 소재지 또는 면적의 변경 등으로 「전기사업법」 제66조의2제1항에 따른 전기안전점검을 받아야 하는 경우로서 비디오물시청제공업 변경등록을 신청한 경우만 해당한다)를 확인하여야 한다. 다만, 신청인이 전기안전점검확인서의 확인에 동의하지 아니하는 경우에는 그 서류를 첨부하도록 하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART20_P5",
         "type": "paragraph",
         "label": "제5항",
         "text": "⑤ 시장ㆍ군수ㆍ구청장은 제4항에 따른 확인 결과 「전기사업법」 제66조의2제1항에 따른 전기안전점검을 받지 아니한 경우에는 관계기관 및 신청인에게 그 내용을 통지하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART20_P6",
         "type": "paragraph",
         "label": "제6항",
         "text": "⑥시장ㆍ군수ㆍ구청장은 제2항과 제3항에 따른 변경신고서 또는 변경등록신청서를 받은 때에는 그 내용을 확인하여 제19조제1항 및 제2항에 따라 갱신된 신고증 또는 등록증을 교부하여야 한다.",
@@ -1451,6 +1633,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART21",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1465,6 +1648,7 @@
     "children": []
   },
   {
+    "id": "FILM_ENFORCE_ART22",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1479,6 +1663,7 @@
     "children": []
   },
   {
+    "id": "FILM_ENFORCE_ART23",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1492,18 +1677,21 @@
     "text": "제23조(폐업신고)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART23_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "① 법 제64조제1항에 따라 폐업신고를 하려는 자는 별지 제30호서식의 비디오물영업 폐업신고서에 신고증 또는 등록증을 첨부하여 시장ㆍ군수ㆍ구청장에게 제출하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART23_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 제1항에 따른 폐업신고를 하려는 자가 「부가가치세법」 제8조제6항에 따른 폐업신고를 같이 하려는 경우에는 제1항에 따른 폐업신고서와 「부가가치세법 시행규칙」 별지 제9호서식의 폐업신고서를 함께 제출하거나 「민원처리에 관한 법률 시행령」 제12조제10항에 따른 통합 폐업신고서를 제출하여야 한다. 이 경우 관할 시장ㆍ군수ㆍ구청장은 함께 제출받은 폐업신고서 또는 통합 폐업신고서를 지체없이 관할 세무서장에게 송부(정보통신망을 이용한 송부를 포함한다. 이하 이 조에서 같다)하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART23_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③ 관할 세무서장이 「부가가치세법 시행령」 제13조제5항에 따라 제1항에 따른 폐업신고서를 받아 이를 관할 시장ㆍ군수ㆍ구청장에게 송부한 경우에는 제1항에 따른 폐업신고서가 제출된 것으로 본다.",
@@ -1512,6 +1700,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART24",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1525,23 +1714,27 @@
     "text": "제24조(직권말소의 확인 등)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART24_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①법 제64조제2항에 따라 영업이 폐지된 영업소를 직권으로 말소하려는 시장ㆍ군수ㆍ구청장은 해당 영업자 또는 건물주 등 영업소의 관계인을 대상으로 다음 각 호의 사항을 확인하여야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART24_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 임대차계약의 종료여부",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART24_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 영업자의 기구ㆍ기기 설치여부",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART24_P1_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 관할 세무서에의 폐업신고 등 영업의 폐지 여부",
@@ -1550,6 +1743,7 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART24_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②시장ㆍ군수ㆍ구청장은 제1항에 따라 직권으로 신고 또는 등록한 사항을 말소하려는 경우 사전에 영업자에게 통지하고 그 사실을 해당기관의 게시판과 인터넷 홈페이지에 20일 이상 게시하여야 한다.",
@@ -1558,6 +1752,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART25",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1571,23 +1766,27 @@
     "text": "제25조(비디오물의 표시사항) 법 제65조제1항에서 \"문화체육관광부령으로 정하는 사항\"이란 다음 각 호의 사항을 말한다.",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART25_I1",
         "type": "item",
         "label": "제1호",
         "text": "1. 삭제",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART25_I2",
         "type": "item",
         "label": "제2호",
         "text": "2. 다음 각 목의 구분에 따른 사항",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART25_I2_A",
             "type": "subitem",
             "label": "가목",
             "text": "가. 영상물등급위원회의 등급분류를 받은 경우: 영상물등급위원회의 비디오물 등급분류번호",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART25_I2_B",
             "type": "subitem",
             "label": "나목",
             "text": "나. 자체등급분류사업자로부터 자체등급분류를 받은 경우로서 영상물등급위원회의 등급분류를 받지 않은 경우: 영상물등급위원회규정으로 정한 바에 따라 자체등급분류사업자가 부여한 온라인비디오물 자체등급분류번호",
@@ -1596,12 +1795,14 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART25_I3",
         "type": "item",
         "label": "제3호",
         "text": "3. 삭제",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART25_I4",
         "type": "item",
         "label": "제4호",
         "text": "4. 방송프로그램을 비디오물로 제작하는 경우에는 「방송법」에 따른 시청등급, 방송프로그램의 방송일자 및 해당 방송사명",
@@ -1610,6 +1811,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART25_2",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1623,41 +1825,48 @@
     "text": "제25조의2(자체등급분류사업자의 광고ㆍ선전물 유해성 확인)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART25_2_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "① 자체등급분류사업자가 법 제66조의2제2항에 따라 영상물등급위원회에 청소년에 대한 유해성 여부의 확인 결과와 광고ㆍ선전물의 세부사항을 통보하는 경우에는 다음 각 호의 사항을 포함해야 한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART25_2_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 유해성 확인 일자",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART25_2_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 유해성 확인 결과 및 그 사유",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART25_2_P1_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 광고ㆍ선전물의 제목",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART25_2_P1_I4",
             "type": "item",
             "label": "제4호",
             "text": "4. 광고ㆍ선전물의 종류",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART25_2_P1_I5",
             "type": "item",
             "label": "제5호",
             "text": "5. 자체등급분류사업자가 확인한 광고ㆍ선전물",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART25_2_P1_I6",
             "type": "item",
             "label": "제6호",
             "text": "6. 그 밖에 청소년에 대한 유해성 여부의 확인 결과 통보에 필요한 사항으로서 영상물등급위원회규정으로 정하는 사항",
@@ -1666,12 +1875,14 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART25_2_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "② 법 제66조의2제2항에 따른 통보는 영상물등급위원회가 구축한 정보통신 시스템으로 할 수 있다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART25_2_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③ 제1항 및 제2항에 규정된 사항 이외에 법 제66조의2제2항에 따른 통보에 필요한 사항은 영상물등급위원회규정으로 정한다.",
@@ -1686,6 +1897,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART26",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1699,35 +1911,41 @@
     "text": "제26조(행정처분의 기준 등)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART26_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①법 제67조제6항에 따른 행정처분의 기준은 별표 4와 같다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART26_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②시장ㆍ군수ㆍ구청장은 행정처분을 한 때에는 별지 제31호서식의 행정처분기록대장에 그 처분내용 등을 기록ㆍ관리하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART26_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③ 시장ㆍ군수ㆍ구청장은 법 제67조제3항에 따라 다음 각 호의 어느 하나에 해당하는 경우에는 해당 비디오물시청제공업자에 대한 행정처분을 면제한다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART26_P3_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 비디오물시청제공업자가 청소년의 신분증 위조ㆍ변조 또는 도용으로 청소년인 사실을 알지 못한 사정이 영상정보처리기기에 촬영된 영상정보, 진술 또는 그 밖의 방법으로 확인된 경우",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART26_P3_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 비디오물시청제공업자가 청소년의 폭행 또는 협박으로 청소년임을 확인하지 못한 사정이 영상정보처리기기에 촬영된 영상정보, 진술 또는 그 밖의 방법으로 확인된 경우",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART26_P3_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 비디오물시청제공업자가 청소년의 신분증 위조ㆍ변조 또는 도용으로 청소년인 사실을 알지 못했거나 폭행 또는 협박으로 청소년임을 확인하지 못한 사정이 인정되어 불송치 또는 불기소(불송치 또는 불기소를 받은 이후 해당 사건에 대하여 다시 수사절차가 진행 중인 경우 또는 해당 사건에 대하여 공소가 제기되어 형사재판이 진행 중인 경우는 제외한다)를 받거나 선고유예 판결을 받은 경우",
@@ -1736,6 +1954,7 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART26_P4",
         "type": "paragraph",
         "label": "제4항",
         "text": "④ 제3항제1호 또는 제2호에도 불구하고 시장ㆍ군수ㆍ구청장은 같은 항 제1호 또는 제2호에 해당하는 비디오물시청제공업자가 법원의 판결에 따라 유죄로 확정된 경우(선고유예 판결을 받은 경우는 제외한다)에는 행정처분을 면제하지 아니한다.",
@@ -1744,6 +1963,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART27",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1757,18 +1977,21 @@
     "text": "제27조(출입기록 등)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART27_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①법 제70조제1항 및 제3항에 따라 폐쇄ㆍ수거 등의 조치를 하기 위하여 영업소에 출입하는 관계공무원은 별지 제32호서식의 관계공무원 출입ㆍ조치사항 기록부에 출입ㆍ조치사항을 적고 서명ㆍ날인하여 이를 영업자에게 교부하여야 한다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART27_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②법 제70조제4항에 따른 불법 비디오물 수거증은 별지 제33호서식에 따른다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART27_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③법 제70조제6항에 따른 관계공무원의 권한을 표시하는 증표는 공무원증으로 하고, 비디오물단체의 임직원의 권한을 표시하는 증표는 별지 제34호서식의 불법 비디오물 단속반원증에 따른다.",
@@ -1777,6 +2000,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART28",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1790,29 +2014,34 @@
     "text": "제28조(모범 비디오물시청제공업자의 지정기준 등)",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART28_P1",
         "type": "paragraph",
         "label": "제1항",
         "text": "①법 제89조에 따라 시장ㆍ군수ㆍ구청장은 다음 각 호의 사항에 관한 평가결과가 시장ㆍ군수ㆍ구청장이 정하는 기준에 해당하는 자를 모범 비디오물시청제공업자로 지정할 수 있다.",
         "children": [
           {
+            "id": "FILM_ENFORCE_ART28_P1_I1",
             "type": "item",
             "label": "제1호",
             "text": "1. 영업자의 법령준수 실태",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART28_P1_I2",
             "type": "item",
             "label": "제2호",
             "text": "2. 영업장의 쾌적성",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART28_P1_I3",
             "type": "item",
             "label": "제3호",
             "text": "3. 안전관리와 위생상태",
             "children": []
           },
           {
+            "id": "FILM_ENFORCE_ART28_P1_I4",
             "type": "item",
             "label": "제4호",
             "text": "4. 고객에 대한 서비스 실태",
@@ -1821,12 +2050,14 @@
         ]
       },
       {
+        "id": "FILM_ENFORCE_ART28_P2",
         "type": "paragraph",
         "label": "제2항",
         "text": "②시장ㆍ군수ㆍ구청장은 제1항에 따라 지정한 모범 비디오물시청제공업자에게 그 업소의 내부 또는 외부에 별표 5의 모범업소 표지판을 붙이게 할 수 있으며, 포상 등 필요한 지원을 할 수 있다.",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART28_P3",
         "type": "paragraph",
         "label": "제3항",
         "text": "③시장ㆍ군수ㆍ구청장은 모범 비디오물시청제공업자가 제1항에 따른 지정기준에 못 미치거나 영업정지 1월 이상의 행정처분을 받게 된 때에는 지정을 취소하여야 한다.",
@@ -1835,6 +2066,7 @@
     ]
   },
   {
+    "id": "FILM_ENFORCE_ART29",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1849,6 +2081,7 @@
     "children": []
   },
   {
+    "id": "FILM_ENFORCE_ART30",
     "document_id": "286045",
     "document_name": "영화 및 비디오물의 진흥에 관한 법률 시행규칙",
     "source": {
@@ -1862,30 +2095,35 @@
     "text": "제30조(규제의 재검토) 문화체육관광부장관은 다음 각 호의 사항에 대하여 다음 각 호의 기준일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 하여야 한다.",
     "children": [
       {
+        "id": "FILM_ENFORCE_ART30_I1",
         "type": "item",
         "label": "제1호",
         "text": "1. 제4조에 따른 영화업자의 신고절차 등: 2014년 1월 1일",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART30_I2",
         "type": "item",
         "label": "제2호",
         "text": "2. 제8조에 따른 영화상영관의 시설기준: 2014년 1월 1일",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART30_I2_2",
         "type": "item",
         "label": "제2의2호",
         "text": "2의2. 제15조의3에 따른 자체등급분류사업자의 준수사항: 2023년 1월 1일",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART30_I2_3",
         "type": "item",
         "label": "제2의3호",
         "text": "2의3. 제15조의3에 따른 친권자 등 법정대리인의 시청 지도수단: 2023년 1월 1일",
         "children": []
       },
       {
+        "id": "FILM_ENFORCE_ART30_I3",
         "type": "item",
         "label": "제3호",
         "text": "3. 제16조에 따른 비디오물제작업 등의 신고 절차: 2014년 1월 1일",

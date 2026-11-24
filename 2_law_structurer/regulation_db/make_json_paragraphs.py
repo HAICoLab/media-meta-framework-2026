@@ -1,16 +1,26 @@
 """규정 JSON의 본문을 조·항 검색용 JSON으로 변환한다.
 
 실행: python make_json_paragraphs.py output/regulations output/paragraphs
+레코드: id(항 ID, 항이 없는 조는 조 ID), article_id(소속 조), article_path, provision_path, content,
+rule_ids(이 레코드에 든 모든 조항 ID: 자신과 하위 호·목).
 """
 import argparse
 import json
 from pathlib import Path
+import re
 import unicodedata
 
 if __package__:
     from .make_json_regulations import collect_text, validate_records, write_json
 else:
     from make_json_regulations import collect_text, validate_records, write_json
+
+
+FIELDS = ['id', 'article_id', 'article_path', 'provision_path', 'content', 'rule_ids']
+
+
+def collect_ids(node):
+    return [node['id'], *(i for child in node['children'] for i in collect_ids(child))]
 
 
 def make_paths(article, paragraph=None):
@@ -34,8 +44,9 @@ def build_paragraphs(records):
         paragraphs = [child for child in article['children'] if child['type'] == 'paragraph']
         if not paragraphs:
             article_path, provision_path = make_paths(article)
-            output.append({'article_path': article_path, 'provision_path': provision_path,
-                           'content': collect_text(article)})
+            output.append({'id': article['id'], 'article_id': article['id'],
+                           'article_path': article_path, 'provision_path': provision_path,
+                           'content': collect_text(article), 'rule_ids': collect_ids(article)})
             continue
         other = [child for child in article['children'] if child['type'] != 'paragraph']
         if other:
@@ -45,25 +56,40 @@ def build_paragraphs(records):
         for paragraph in paragraphs:
             article_path, provision_path = make_paths(article, paragraph)
             content = '\n'.join(filter(None, [prefix, collect_text(paragraph)]))
-            output.append({'article_path': article_path, 'provision_path': provision_path,
-                           'content': content})
+            output.append({'id': paragraph['id'], 'article_id': article['id'],
+                           'article_path': article_path, 'provision_path': provision_path,
+                           'content': content, 'rule_ids': collect_ids(paragraph)})
     errors = validate_paragraphs(output)
     if errors:
         raise ValueError(f'검색 JSON 오류: {errors[:5]}')
     return output
 
 
+def belongs(rule_id, article_id):
+    """rule_id가 article_id 조의 ID인가. ART1과 ART10, ART38과 ART38_2처럼 앞부분만 같은 다른 조는 거른다."""
+    return isinstance(rule_id, str) and (rule_id == article_id
+                                         or re.match(re.escape(article_id) + r'_(?:P\d|I\d|[A-Z]+$|[A-Z]+_)', rule_id) is not None)
+
+
 def validate_paragraphs(records):
-    errors, seen = [], set()
+    errors, seen, ids = [], set(), set()
     if not isinstance(records, list) or not records:
         return ['비어 있지 않은 검색 레코드 목록이 필요합니다.']
     for index, record in enumerate(records):
-        if not isinstance(record, dict) or set(record) != {'article_path', 'provision_path', 'content'}:
+        if not isinstance(record, dict) or set(record) != set(FIELDS):
             errors.append(f'{index}: 검색 레코드의 키가 올바르지 않습니다.')
             continue
-        if any(not isinstance(value, str) or not value.strip() for value in record.values()):
+        if any(not isinstance(record[key], str) or not record[key].strip() for key in FIELDS if key != 'rule_ids'):
             errors.append(f'{index}: 비어 있지 않은 문자열이 필요합니다.')
             continue
+        rule_ids = record['rule_ids']
+        if (not isinstance(rule_ids, list) or not rule_ids or rule_ids[0] != record['id']
+                or any(not belongs(i, record['article_id']) for i in rule_ids)):
+            errors.append(f'{index}: rule_ids는 자신의 ID로 시작하고 같은 조의 ID만 담아야 합니다.')
+            continue
+        if ids & set(rule_ids):
+            errors.append(f'{index}: 조항 ID가 두 레코드에 들어 있음')
+        ids.update(rule_ids)
         path = record['provision_path']
         if path in seen:
             errors.append(f'{index}: 검색 경로 중복 {path}')

@@ -229,3 +229,6 @@ __marimo__/
 *.bz2
 *.bz2.info.json
 1_web_crawler/data/
+
+# 합성 벤치마크 생성 결과는 저장소에 넣지 않고 공유 드라이브로 전달한다
+2_law_structurer/benchmark/output/

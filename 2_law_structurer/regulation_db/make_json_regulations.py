@@ -1,7 +1,8 @@
 """규정 TXT를 문서별 중첩 JSON으로 변환한다.
 
 실행: python make_json_regulations.py data output/regulations
-출처 머리말로 형식 판별 → 영역 분리 → 조·항·호·목 구성 → 표 변환 → 원문 대조 검증 → 저장.
+출처 머리말로 형식 판별 → 영역 분리 → 원문 보정 → 조·항·호·목 구성 → 조항 ID → 표 변환 → 원문 대조 검증 → 저장.
+조항 ID 앞머리와 원문 보정 표는 document_rules/documents.py에 있다.
 """
 import argparse
 from collections import Counter
@@ -14,10 +15,10 @@ import tempfile
 import unicodedata
 
 if __package__:
-    from .document_rules import administrative_rule, law_rule, common
+    from .document_rules import administrative_rule, law_rule, common, documents
     from .table_processor import process_tables
 else:
-    from document_rules import administrative_rule, law_rule, common
+    from document_rules import administrative_rule, law_rule, common, documents
     from table_processor import process_tables
 
 
@@ -119,6 +120,7 @@ def build_records(source, prepared, sections, rules):
     document_id = metadata.get('serial')
     if not isinstance(document_id, str) or not document_id.strip():
         raise ValueError('문서 식별자가 없습니다.')
+    id_prefix = documents.prefix(metadata['document_name'])
     records, reviews, removed = [], [], []
     origin = {'file': source['file'], 'effective_date': metadata['effective_date']}
     for section in sections:
@@ -126,8 +128,10 @@ def build_records(source, prepared, sections, rules):
                     'source': origin.copy(), 'region': section['region'],
                     'region_label': section['region_label']}
         if section['region'] == 'body':
-            nodes, warnings = build_nodes(section['lines'], rules)
-            records.extend({**envelope, **node} for node in nodes)
+            rows, notes = documents.correct(metadata['document_name'], section['lines'])
+            nodes, warnings = build_nodes(rows, rules)
+            records.extend(documents.assign_ids({**envelope, **node}, id_prefix) for node in nodes)
+            reviews.extend({**note, 'label': '본문'} for note in notes)
             reviews.extend(warnings)
         else:
             rows, label = section['lines'], section['region_label']
@@ -158,7 +162,8 @@ def validate_records(records):
     if not isinstance(records, list) or not records:
         return ['비어 있지 않은 규정 레코드 목록이 필요합니다.']
     identity = None
-    allowed = {'type', 'label', 'text', 'children', 'parents', 'annotations'}
+    allowed = {'id', 'type', 'label', 'text', 'children', 'parents', 'annotations'}
+    ids = set()
 
     def visit(node, path, parent=None, top=False):
         if not isinstance(node, dict):
@@ -197,6 +202,15 @@ def validate_records(records):
             errors.append(f'{path}: 허용되지 않은 계층 {parent}/{kind}')
         if kind == 'block' and node['children']:
             errors.append(f'{path}: 부속 블록 children은 빈 목록이어야 합니다.')
+        if kind == 'block' and 'id' in node:
+            errors.append(f'{path}.id: 부칙·별표에는 조항 ID를 붙이지 않습니다.')
+        if kind != 'block':
+            if not isinstance(node.get('id'), str) or not node['id'].strip():
+                errors.append(f'{path}.id: 조항 ID 필요')
+            elif node['id'] in ids:
+                errors.append(f'{path}.id: 조항 ID 중복 {node["id"]}')
+            else:
+                ids.add(node['id'])
         if 'parents' in node:
             parents = node['parents']
             if kind != 'article' or not isinstance(parents, dict):
@@ -257,6 +271,7 @@ def _validate_source(source, prepared, sections, excluded, records, rules):
     if sorted(assigned, key=lambda r: r['source_line']) != prepared['lines']:
         errors.append('영역 분리 중 원문 누락/중복')
     body_rows = [r for s in sections if s['region'] == 'body' for r in s['lines']]
+    body_rows, _ = documents.correct(prepared['metadata']['document_name'], body_rows)   # 보정한 줄 기준으로 대조
     expected = '\n'.join(r['text'] for r in body_rows
                          if not rules.heading(r['text'])
                          and not common.ANNOTATION.fullmatch(r['text'].strip()))
