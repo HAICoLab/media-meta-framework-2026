@@ -29,15 +29,16 @@ class Paragraphs(unittest.TestCase):
 
     def test_article_without_paragraph_is_one_record_with_its_items(self):
         article = next(r for r in self.records if r['label'].startswith('제2조('))
-        result = next(r for r in self.paragraphs if ' 제2조(' in r['article_path'])
-        self.assertEqual(result['article_path'], result['provision_path'])
+        result = next(r for r in self.paragraphs if ' 제2조(' in r['provision_path'])
+        self.assertEqual(result['id'], result['article_id'])
+        self.assertTrue(result['provision_path'].endswith(article['label']))
         self.assertEqual(result['content'], reg.collect_text(article))
         self.assertIn('1.', result['content'])
         self.assertIn('가.', result['content'])
 
     def test_explicit_paragraphs_preserve_markers_and_descendants(self):
         article = next(r for r in self.records if r['label'].startswith('제5조('))
-        results = [r for r in self.paragraphs if ' 제5조(' in r['article_path']]
+        results = [r for r in self.paragraphs if ' 제5조(' in r['provision_path']]
         self.assertEqual(len(results), 2)
         self.assertTrue(results[0]['content'].startswith('①'))
         self.assertEqual(results[0]['content'], reg.collect_text(article['children'][0]))
@@ -51,18 +52,20 @@ class Paragraphs(unittest.TestCase):
         split = {r['article_id'] for r in self.paragraphs if r['id'] != r['article_id']}
         self.assertEqual(len(placed), len(set(placed)))
         self.assertEqual(sorted(set(expected) - split), sorted(placed))
-        result = next(r for r in self.paragraphs if ' 제5조(' in r['article_path'])
+        result = next(r for r in self.paragraphs if ' 제5조(' in r['provision_path'])
         self.assertEqual(result['id'], result['article_id'] + '_P1')
 
     def test_optional_parents_are_in_path_in_order(self):
         article = copy.deepcopy(self.records[0])
         article['parents'] = {'section': '제1절 범위', 'part': '제1편 총칙', 'chapter': '제1장 일반'}
-        path, _ = para.make_paths(article)
+        path = para.make_path(article)
         self.assertIn('제1편 총칙 제1장 일반 제1절 범위 제1조', path)
 
     def test_duplicate_search_paths_are_rejected(self):
         self.assertTrue(para.validate_paragraphs(self.paragraphs + self.paragraphs[:1]))
-        self.assertTrue(para.validate_paragraphs([{'article_path': [], 'provision_path': '', 'content': None}]))
+        self.assertTrue(para.validate_paragraphs([{'provision_path': [], 'content': None}]))
+        wrong = dict(self.paragraphs[0], id=self.paragraphs[0]['article_id'] + '_P9')
+        self.assertTrue(para.validate_paragraphs([wrong]))
 
     def test_two_cli_steps_and_source_overwrite_protection(self):
         with tempfile.TemporaryDirectory() as folder:

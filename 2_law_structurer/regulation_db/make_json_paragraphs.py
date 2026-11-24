@@ -1,7 +1,7 @@
 """규정 JSON의 본문을 조·항 검색용 JSON으로 변환한다.
 
 실행: python make_json_paragraphs.py output/regulations output/paragraphs
-레코드: id(항 ID, 항이 없는 조는 조 ID), article_id(소속 조), article_path, provision_path, content,
+레코드: id(항 ID, 항이 없는 조는 조 ID), article_id(소속 조), provision_path(문서명·편장절·조·항 경로), content,
 rule_ids(이 레코드에 든 모든 조항 ID: 자신과 하위 호·목).
 """
 import argparse
@@ -16,20 +16,19 @@ else:
     from make_json_regulations import collect_text, validate_records, write_json
 
 
-FIELDS = ['id', 'article_id', 'article_path', 'provision_path', 'content', 'rule_ids']
+FIELDS = ['id', 'article_id', 'provision_path', 'content', 'rule_ids']
 
 
 def collect_ids(node):
     return [node['id'], *(i for child in node['children'] for i in collect_ids(child))]
 
 
-def make_paths(article, paragraph=None):
+def make_path(article, paragraph=None):
+    """문서명, 상위 편·장·절, 조 이름(항이 있으면 항 이름까지)을 공백으로 이은 경로."""
     parents = article.get('parents', {})
     headings = [parents[key] for key in ('part', 'chapter', 'section') if key in parents]
     parts = [article['document_name'], *headings, article['label']]
-    article_path = ' '.join(parts)
-    provision_path = article_path + (' ' + paragraph['label'] if paragraph else '')
-    return article_path, provision_path
+    return ' '.join(parts + ([paragraph['label']] if paragraph else []))
 
 
 def build_paragraphs(records):
@@ -43,9 +42,7 @@ def build_paragraphs(records):
             continue
         paragraphs = [child for child in article['children'] if child['type'] == 'paragraph']
         if not paragraphs:
-            article_path, provision_path = make_paths(article)
-            output.append({'id': article['id'], 'article_id': article['id'],
-                           'article_path': article_path, 'provision_path': provision_path,
+            output.append({'id': article['id'], 'article_id': article['id'], 'provision_path': make_path(article),
                            'content': collect_text(article), 'rule_ids': collect_ids(article)})
             continue
         other = [child for child in article['children'] if child['type'] != 'paragraph']
@@ -54,10 +51,9 @@ def build_paragraphs(records):
         # 조 제목 뒤에 항 번호 없이 오는 문장은 모든 항에 공통 맥락으로 붙인다.
         prefix = article['text'][len(article['label']):].strip()
         for paragraph in paragraphs:
-            article_path, provision_path = make_paths(article, paragraph)
             content = '\n'.join(filter(None, [prefix, collect_text(paragraph)]))
             output.append({'id': paragraph['id'], 'article_id': article['id'],
-                           'article_path': article_path, 'provision_path': provision_path,
+                           'provision_path': make_path(article, paragraph),
                            'content': content, 'rule_ids': collect_ids(paragraph)})
     errors = validate_paragraphs(output)
     if errors:
@@ -94,8 +90,9 @@ def validate_paragraphs(records):
         if path in seen:
             errors.append(f'{index}: 검색 경로 중복 {path}')
         seen.add(path)
-        if path != record['article_path'] and not path.startswith(record['article_path'] + ' 제'):
-            errors.append(f'{index}: 조·항 경로 불일치')
+        paragraph = re.fullmatch(re.escape(record['article_id']) + r'_P(\d+)', record['id'])
+        if record['id'] != record['article_id'] and not (paragraph and path.endswith(f' 제{paragraph[1]}항')):
+            errors.append(f'{index}: ID와 경로가 맞지 않음 (조 또는 그 조의 항이어야 함)')
     return errors
 
 

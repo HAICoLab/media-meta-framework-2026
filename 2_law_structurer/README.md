@@ -233,7 +233,6 @@ TXT 하나당 JSON 파일 하나이며, 본문 조문·부칙·별표 레코드�
 {
   "id": "CONSECUTIVE_NOTICE_ART1",
   "article_id": "CONSECUTIVE_NOTICE_ART1",
-  "article_path": "연속편성 세부기준 등에 관한 고시 제1조(목적)",
   "provision_path": "연속편성 세부기준 등에 관한 고시 제1조(목적)",
   "content": "제1조(목적) 이 고시는 「방송법」(이하 \"법\"이라 한다) 제73조제2항 ... 정함을 목적으로 한다.",
   "rule_ids": ["CONSECUTIVE_NOTICE_ART1"]
@@ -244,8 +243,7 @@ TXT 하나당 JSON 파일 하나이며, 본문 조문·부칙·별표 레코드�
 |---|---|
 | `id` | 레코드의 조항 ID. 항이면 항 ID, 항이 없는 조면 조 ID |
 | `article_id` | 소속 조의 ID |
-| `article_path` | 문서명, 상위 편·장·절, 조문 이름을 공백으로 이은 경로 |
-| `provision_path` | `article_path`에 항 이름을 더한 경로 |
+| `provision_path` | 문서명, 상위 편·장·절, 조문 이름(항이 있으면 항 이름까지)을 공백으로 이은 경로. 항이 없는 조는 조 이름에서 끝납니다 |
 | `content` | 해당 항과 하위 호·목을 합친 원문 |
 | `rule_ids` | 이 레코드에 든 모든 조항 ID(자신과 하위 호·목). 조항 ID 하나는 레코드 하나에만 들어갑니다 |
 

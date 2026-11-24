@@ -132,7 +132,8 @@ def heading_of(label):
 def is_deleted(node):
     """"삭제"된 조·항·호. 정답이 될 수 없다."""
     text = re.sub(r'<[^>]*>|\[[^\]]*\]', '', node['text'])
-    return not node['children'] and bool(re.fullmatch(r'(?:제\d+조(?:의\d+)?|[①-⑳]|\d+\.)?\s*삭\s*제\s*', text.strip()))
+    return not node['children'] and bool(re.fullmatch(r'(?:제\d+조(?:의\d+)?|[①-⑳]|\d+(?:의\d+)?\.|[가-힣]\.)?\s*삭\s*제\s*',
+                                                      text.strip()))
 
 
 class Regulations:
